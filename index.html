@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -63,7 +64,6 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 .nav>a,.nav-group>a{font-size:13px;letter-spacing:.008em;font-weight:650;color:#456070;line-height:90px}
 .nav a:hover,.nav a[aria-current="page"]{color:var(--accentdeep)}
 .nav a[aria-current="page"]:after{background:var(--teal);height:3px}
-.nav-chevron{font-size:16px;font-weight:400;margin-left:2px;color:#7f9aa2}
 .nav-group{position:relative;display:flex;align-items:center}
 .submenu{display:none;position:absolute;top:calc(100% - 8px);right:-12px;min-width:220px;padding:9px;background:#fff;border:1px solid var(--line);border-radius:11px;box-shadow:0 14px 40px rgba(17,51,63,.13);z-index:25}
 .nav-group:hover .submenu,.nav-group:focus-within .submenu{display:grid}
@@ -173,59 +173,60 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 @media(prefers-reduced-motion:reduce){.resource-card{transition:none}}
 
 
-/* Private-code-friendly software showcase for the numerical analysis project. */
-.software-showcase{margin:17px 0 12px;padding:18px 19px;border:1px solid #c8dfda;border-radius:12px;background:linear-gradient(135deg,#f1f9f7 0%,#f9fcfb 100%)}
-.software-showcase-heading{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:11px}
-.software-showcase-heading strong{font-size:13px;font-weight:760;color:var(--navy);letter-spacing:.012em}
-.software-showcase-label{font-size:10px;font-weight:740;color:#226d70;background:#d8efea;border-radius:20px;padding:4px 9px;letter-spacing:.05em;text-transform:uppercase}
-.software-showcase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
-.software-card{display:flex;align-items:flex-start;gap:10px;border:1px solid #dbeae7;border-radius:9px;background:rgba(255,255,255,.94);padding:12px;min-width:0}
-.software-card svg{width:23px;height:23px;flex:0 0 23px;color:var(--teal);margin-top:1px}
-.software-card strong{font-size:13px;line-height:1.35;display:block;color:var(--navy);font-weight:690}
-.software-card span{font-size:12px;line-height:1.5;color:#748c92;display:block;margin-top:5px}
-.software-caption{font-size:11.7px!important;color:#688b8c!important;line-height:1.6!important;margin:12px 0 0!important}
-@media(max-width:760px){.software-showcase{padding:15px}.software-showcase-grid{grid-template-columns:1fr}}
 
-
-/* v4 · compact project resources and optional Streamlit email request */
-.research-pub-links{gap:18px;margin:11px 0 12px;row-gap:7px}
-.research-pub-links .quiet-link{font-size:12.8px;font-weight:680;display:inline-flex;align-items:center;gap:6px;line-height:1.35}
-.research-pub-links .quiet-link svg{width:14px;height:14px;flex:0 0 auto}
-.research-pub-links .quiet-disabled{color:#a5b3b8;cursor:default;opacity:.76}
-.app-link-note{font-size:12px!important;color:#8aa1a6!important;margin:0 0 10px!important}
-.wake-intro{display:flex;gap:17px;padding:19px 20px;border:1px solid #c7e2db;background:#f3faf8;border-radius:12px;margin:16px 0 25px;color:var(--navy)}
-.wake-intro-icon{width:38px;height:38px;flex:0 0 38px;border-radius:12px;background:#dcefeb;color:var(--teal);display:grid;place-items:center;font-size:23px;font-weight:700;line-height:1}
-.wake-intro strong{font-size:16px;font-weight:750}
-.wake-intro p{font-size:13.5px;line-height:1.7;color:#607a7e;margin:5px 0 0}
-.request-form{padding:25px;border:1px solid var(--line);border-radius:12px;background:#fff;display:grid;gap:16px}
-.request-field{display:flex;flex-direction:column;gap:6px}
-.request-field label{font-weight:690;font-size:13px;color:var(--navy)}
-.request-field label span{color:var(--teal)}
-.request-field .optional{color:#91a3a8;font-weight:450}
-.request-field input,.request-field textarea{width:100%;border:1px solid #cdd9db;outline:none;background:#fbfdfd;color:#263d45;padding:11px 13px;border-radius:7px;font:inherit;font-size:14px;line-height:1.5;transition:border-color .15s,box-shadow .15s}
-.request-field input:focus,.request-field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #d8f0eb}
-.consent{font-size:12.6px;line-height:1.65;color:#617a7e;display:flex;gap:10px;align-items:flex-start}
-.consent input{margin-top:4px;accent-color:var(--teal);width:16px;height:16px;flex-shrink:0}
-.request-submit{border:0;cursor:pointer;justify-self:start;font-size:14px}
-.form-privacy{font-size:11.5px;line-height:1.6;color:#94a2a7;margin:0!important}
-.streamlit-direct{margin:22px 0 0;font-size:13px;color:#82979c}
-.bot-trap{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
-@media(max-width:760px){.research-pub-links{gap:13px}.request-form{padding:18px}.wake-intro{padding:16px;gap:12px}.wake-intro-icon{width:33px;height:33px;flex-basis:33px}.request-submit{width:100%}}
+/* v6 · Education page / academic record */
+.education-section-title{font-size:24px;margin:24px 0 18px;color:var(--navy)}
+.edu-degree{display:grid;grid-template-columns:108px minmax(0,1fr);gap:25px;align-items:start;padding:22px 0 7px;border-top:1px solid var(--line)}
+.edu-date{font-size:12px;line-height:1.75;letter-spacing:.045em;font-weight:780;color:var(--teal);padding-top:7px}
+.edu-date span{color:#78959a}
+.edu-degree-body{min-width:0}
+.edu-eyebrow,.edu-thesis-kicker{font-size:10.5px;color:var(--teal);letter-spacing:.12em;font-weight:800}
+.edu-degree-body>h3{font-size:23px;font-weight:725;line-height:1.35;letter-spacing:-.035em;color:var(--navy);margin:6px 0 7px}
+.edu-institution{margin:0;color:#5c6f79;font-size:14.5px;font-weight:600;line-height:1.55}
+.edu-location{color:#8499a0;font-size:13px;margin:3px 0 20px!important}
+.edu-metrics{display:flex;align-items:stretch;flex-wrap:wrap;gap:13px;margin:19px 0 22px}
+.edu-metrics>div{min-width:170px;flex:1;background:#f3f9f8;border:1px solid #d9eae7;border-radius:10px;padding:14px 17px}
+.edu-metrics strong{display:block;font-size:25px;line-height:1.2;color:var(--navy);font-family:Georgia,serif;font-weight:600;letter-spacing:-.04em}
+.edu-metrics strong span{font-size:16px;color:#83a0a4;letter-spacing:0}
+.edu-metrics small{display:block;margin-top:5px;font-size:11.5px;color:#6b878c;font-weight:600}
+.edu-thesis{border-left:3px solid var(--teal);padding:3px 0 4px 17px;margin-bottom:13px}
+.edu-thesis h4{font-size:17px;font-weight:690;line-height:1.48;color:var(--navy);margin:6px 0 9px}
+.edu-thesis p{font-size:14px;line-height:1.7;color:#637985;margin:0 0 10px}
+.edu-supervisor{font-size:12.5px;color:#8399a0}
+.education-downloads{margin-top:14px;gap:18px}
+.education-downloads .quiet-link{font-size:13px;gap:5px;line-height:1.5}
+.education-downloads .quiet-disabled{opacity:.65;color:#889da3;cursor:default}
+.education-divider{border:0;border-top:1px solid var(--line);margin:39px 0 26px}
+.education-other-intro{margin-bottom:14px}
+.edu-research-list .project:first-child{border-top:1px solid var(--line)}
+.edu-research-list .project{padding:20px 0}
+.edu-research-list .project .mentor{margin-top:8px}
+.edu-more-link{display:inline-flex;align-items:center;gap:4px;margin-top:11px;font-size:12.5px;font-weight:700;color:var(--teal)}
+@media(max-width:760px){
+ .edu-degree{grid-template-columns:1fr;gap:8px;padding-top:14px}
+ .edu-date{padding-top:0;font-size:11px}.edu-date br{display:none}.edu-date span{display:inline}
+ .edu-date span::before{content:' '}
+ .edu-degree-body>h3{font-size:21px}
+ .edu-metrics>div{min-width:125px;padding:12px}
+ .edu-metrics strong{font-size:23px}
+ .edu-thesis{padding-left:13px}
+ .education-section-title{font-size:23px}
+}
 </style>
 </head>
 <body>
 <div class="shell">
 <header class="header">
-<a aria-label="Tan-Dat Khuu — homepage" class="brand" href="#home"><span class="brand-name">Tan-Dat Khuu<span class="brand-dot">.</span></span><span class="brand-tag">PERSONAL ACADEMIC WEBSITE</span></a>
+<a aria-label="Tan-Dat Khuu — homepage" class="brand" href="#home"><span class="brand-name">Tan-Dat Khuu</span><span class="brand-tag">PERSONAL ACADEMIC WEBSITE</span></a>
 <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
 <nav aria-label="Main navigation" class="nav" id="primary-nav">
 <a aria-current="page" data-tab="home" href="#home">Home</a>
-<a data-tab="publications" href="#publications">Publications</a>
-<a data-tab="research" href="#research">Research</a>
+<a data-tab="publications" href="#publications">Paper</a>
+<a data-tab="education" href="#education">Education</a>
 <a data-tab="talks" href="#talks">Talks &amp; Conferences</a>
 <a data-tab="teaching" href="#teaching">Teaching</a>
-<div class="nav-group"><a data-tab="resources" href="#resources">Resources <span aria-hidden="true" class="nav-chevron">⌄</span></a>
-<div aria-label="Resources categories" class="submenu"><a href="#resources-notes">Study Notes</a><a href="#resources-books">Books</a><a href="#resources-english">English &amp; GRE</a><a href="#resources-other">Other Resources</a></div></div>
+<div class="nav-group"><a data-tab="resources" href="#resources">Resources</a>
+<div aria-label="Resources categories" class="submenu"><a href="#resources-notes">Study Notes</a><a href="#resources-books">Books</a><a href="#resources-other">Other Resources</a></div></div>
 <a data-tab="contact" href="#contact">Contact</a>
 </nav>
 </header>
@@ -233,7 +234,7 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <aside aria-label="Academic profile" class="sidebar">
 <div class="profile-wrap">
 <img alt="Portrait of Tan-Dat Khuu at VIASM" class="avatar" height="212" src="assets/tan_dat_khuu_portrait.jpg" width="212"/>
-<h1 class="profile-name">Tan-Dat Khuu<span class="profile-name-dot">.</span></h1>
+<h1 class="profile-name">Tan-Dat Khuu</h1>
 <p class="profile-job">Applied Mathematics Graduate<br/>Independent Researcher</p>
 <p class="profile-affiliation">Ton Duc Thang University<br/><span style="font-size:13px;color:#a4abbb">(Alumnus)</span></p>
 <p class="profile-place"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Ho Chi Minh City, Vietnam</p>
@@ -261,93 +262,114 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <li>Mathematical Analysis</li>
 <li>Mathematical Physics</li>
 </ul></div>
-<div><h3 class="section-heading">Education</h3><ul class="education-list"><li><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="18"><path d="m2 10 10-5 10 5-10 5-10-5ZM6 12v5c4 3 8 3 12 0v-5M22 10v6"></path></svg><div><strong>B.Sc. in Applied Mathematics, 2025</strong><span class="faint">Ton Duc Thang University, Vietnam</span><span class="faint">GPA: 8.74/10.00 · Bachelor's thesis: 10/10</span></div></li></ul></div>
+<div><h3 class="section-heading">Education</h3><ul class="education-list"><li><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="18"><path d="m2 10 10-5 10 5-10 5-10-5ZM6 12v5c4 3 8 3 12 0v-5M22 10v6"></path></svg><div><strong>B.Sc. in Applied Mathematics, 2025</strong><span class="faint">Ton Duc Thang University, Vietnam</span><span class="faint">GPA: 8.74/10.00 · Bachelor's thesis: 10/10</span><a class="edu-more-link" href="#education">Education &amp; other research <span aria-hidden="true">↗</span></a></div></li></ul></div>
 </div>
 <hr class="soft-separator"/>
-<div class="section-kicker">SELECTED WORK</div>
-<div class="section-row"><h3 class="recent-title">Selected Publications</h3><a class="section-more" href="#publications">All publications <span aria-hidden="true">↗</span></a></div>
+<div class="section-kicker">RECENT RESEARCH</div>
+<div class="section-row"><h3 class="recent-title">Recent Papers &amp; Preprints</h3><a class="section-more" href="#publications">All papers <span aria-hidden="true">↗</span></a></div>
 <div class="home-pubs">
-<article class="home-pub"><span class="home-pub-n">01</span><div><span class="category-tag">Published · 2026</span><h4>Liouville-type results for infinity elliptic equations involving gradient and Hardy–Hénon nonlinearities</h4><p><em>Mathematische Zeitschrift</em> 312 (2026), Art. 116</p><a href="https://doi.org/10.1007/s00209-026-03979-9" rel="noopener noreferrer" target="_blank">Read paper ↗</a></div></article>
-<article class="home-pub"><span class="home-pub-n">02</span><div><span class="category-tag">Published · 2024</span><h4>Regularity for non-uniformly elliptic double obstacle problems with fractional maximal operators</h4><p><em>Differential Equations &amp; Applications</em> 16(3) (2024), 251–268</p><a href="https://doi.org/10.7153/dea-2024-16-15" rel="noopener noreferrer" target="_blank">Read paper ↗</a></div></article>
+<article class="home-pub"><span class="home-pub-n">01</span><div>
+<span class="category-tag">Preprint · August 2026</span>
+<h4>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h4>
+<p>arXiv:2608.09317 [math.AP] (2026) · Under journal consideration</p>
+<a href="https://arxiv.org/abs/2608.09317" rel="noopener noreferrer" target="_blank">arXiv ↗</a>
+</div></article>
+<article class="home-pub"><span class="home-pub-n">02</span><div>
+<span class="category-tag">Published · 2026</span>
+<h4>Liouville-type results for infinity elliptic equations involving gradient and Hardy–Hénon nonlinearities</h4>
+<p><em>Mathematische Zeitschrift</em> 312 (2026), Art. 116</p>
+<a href="https://doi.org/10.1007/s00209-026-03979-9" rel="noopener noreferrer" target="_blank">Journal / DOI ↗</a>
+</div></article>
 </div>
 <div class="section-row awards-home-heading"><h3 class="recent-title">Academic Highlights</h3><a class="section-more" href="#talks">Talks &amp; conferences <span aria-hidden="true">↗</span></a></div>
 <div class="mini-awards"><div class="mini-award"><span aria-hidden="true" class="mini-award-icon">✦</span><div><strong>First Prize · VIASM REU 2025</strong><span>Research Experience for Undergraduates</span></div></div><div class="mini-award"><span aria-hidden="true" class="mini-award-icon">✦</span><div><strong>Second Prize · 2025</strong><span>University Student Scientific Research Competition</span></div></div></div>
 </section>
 <section aria-labelledby="publications-title" class="page" data-page="publications" hidden="" id="publications">
-<h2 class="page-title" id="publications-title">Publications</h2>
+<h2 class="page-title" id="publications-title">Paper</h2>
 <p class="section-intro">Published articles and preprints in nonlinear partial differential equations and elliptic regularity.</p>
-<h3 class="subheading">Published papers</h3>
+<h3 class="subheading">Publications</h3>
 <article class="publication"><div class="pub-number">01</div><div>
 <h3>Liouville-type results for infinity elliptic equations involving gradient and Hardy–Hénon nonlinearities</h3><div class="authors"><strong>T.-D. Khuu</strong>, T.-H. Huynh, and H.-H. Vo</div><div class="venue"><em>Mathematische Zeitschrift</em> 312 (2026), Article 116.</div>
 <div class="pub-links"><a class="quiet-link" href="https://doi.org/10.1007/s00209-026-03979-9" rel="noopener noreferrer" target="_blank">Journal / DOI<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a><a class="quiet-link" href="https://arxiv.org/abs/2511.16116" rel="noopener noreferrer" target="_blank">arXiv<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div></article>
 <article class="publication"><div class="pub-number">02</div><div>
 <h3>Regularity for non-uniformly elliptic double obstacle problems with fractional maximal operators</h3><div class="authors">G. K. Tran and <strong>T.-D. Khuu</strong></div><div class="venue"><em>Differential Equations &amp; Applications</em> 16(3) (2024), 251–268.</div>
-<div class="pub-links"><a class="quiet-link" href="https://doi.org/10.7153/dea-2024-16-15" rel="noopener noreferrer" target="_blank">Journal / DOI<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a><a class="quiet-link" href="https://files.ele-math.com/articles/dea-16-15.pdf" rel="noopener noreferrer" target="_blank">PDF<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div></article>
+<div class="pub-links"><a class="quiet-link" href="https://doi.org/10.7153/dea-2024-16-15" rel="noopener noreferrer" target="_blank">Journal / DOI<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div></article>
 <h3 class="subheading" style="margin-top:34px">Preprints</h3>
 <article class="publication"><div class="pub-number">03</div><div>
 <span class="category-tag">Preprint · 2026</span>
 <h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><div class="authors">T.-H. Huynh, <strong>T.-D. Khuu</strong>, and H.-H. Vo</div><div class="venue">arXiv:2608.09317 [math.AP] (2026). Under journal consideration.</div>
-<div class="pub-links"><a class="quiet-link" href="https://arxiv.org/abs/2608.09317" rel="noopener noreferrer" target="_blank">arXiv abstract<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a><a class="quiet-link" href="https://arxiv.org/pdf/2608.09317" rel="noopener noreferrer" target="_blank">PDF<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div></article>
+<div class="pub-links"><a class="quiet-link" href="https://arxiv.org/abs/2608.09317" rel="noopener noreferrer" target="_blank">arXiv<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div></article>
 </section>
-<section aria-labelledby="research-title" class="page" data-page="research" hidden="" id="research">
-<h2 class="page-title" id="research-title">Research</h2>
-<p class="section-intro">Selected research projects, beginning with my more recent work in nonlinear elliptic equations.</p>
-<article class="project"><span class="project-number">01</span><div class="project-body"><div class="project-top"><h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><span class="dates">Dec 2025 – Aug 2026</span></div><p>Global C¹,γ regularity, Harnack inequalities, Liouville-type rigidity, and principal eigenvalues for nonlinear elliptic equations with Hamiltonian terms.</p><div aria-label="Project links" class="pub-links research-pub-links"><a class="quiet-link" href="https://arxiv.org/pdf/2608.09317" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg>PDF</a></div><div class="mentor">Supervisor: Assoc. Prof. Hoang-Hung Vo · International University, VNU–HCM</div></div></article>
-<article class="project"><span class="project-number">02</span><div class="project-body"><div class="project-top"><h3>Liouville-Type Results for Infinity Elliptic Equations Involving Gradient and Hardy–Hénon Nonlinearities</h3><span class="dates">Aug 2025 – Mar 2026</span></div><p>Weighted comparison principles, existence and uniqueness, radial analysis, and Liouville-type properties for infinity elliptic equations.</p><div aria-label="Project links" class="pub-links research-pub-links"><a class="quiet-link" href="https://arxiv.org/pdf/2511.16116" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg>PDF</a></div><div class="mentor">Supervisor: Assoc. Prof. Hoang-Hung Vo · International University, VNU–HCM</div></div></article>
-<article class="project"><span class="project-number">03</span><div class="project-body"><div class="project-top"><h3>Regularity for Solutions to Non-Uniformly Elliptic Equations in Generalized Function Spaces</h3><span class="dates">Aug 2024 – Jul 2025</span></div><p>Bachelor's thesis on global gradient estimates for double-phase equations with (p, q)-growth in Lorentz, Orlicz, and generalized Morrey-type spaces.</p><div aria-label="Project links" class="pub-links research-pub-links"><a class="quiet-link" href="assets/pdfs/bachelor_thesis_vie.pdf" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg>PDF_VIE</a><span aria-label="PDF_ENG · soon, not yet available" class="quiet-link quiet-disabled" title="File not yet available"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg>PDF_ENG · soon</span></div><div class="mentor">Supervisor: Assoc. Prof. Minh-Phuong Tran · Ton Duc Thang University</div></div></article>
-<article class="project"><span class="project-number">04</span><div class="project-body"><div class="project-top"><h3>Multistep Methods and Numerical Simulations for Real-World Models</h3><span class="dates">Aug 2024 – Jul 2025</span></div>
-<p>Adams–Bashforth and Adams–Moulton methods: convergence, consistency, stability, and numerical experiments in Python. As part of this project, I also developed desktop and web applications for numerical computing and simulations.</p>
-
-<div aria-label="Project links" class="pub-links research-pub-links"><a class="quiet-link" href="assets/pdfs/multistep_methods_vie.pdf" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg>PDF_VIE</a><span aria-label="PDF_ENG · soon, not yet available" class="quiet-link quiet-disabled" title="File not yet available"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg>PDF_ENG · soon</span><a class="quiet-link" href="https://drive.google.com/drive/folders/1Cy1le_rF0tYdrienfDnexj5CWZY2vj_j?usp=sharing" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><rect height="13" rx="2" width="18" x="3" y="4"></rect><path d="M8 21h8M12 17v4"></path></svg>Desktop app</a><a class="quiet-link" href="#streamlit-access"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>Web app</a></div><p class="app-link-note">Desktop: shared via Google Drive · Web: request a wake-up notification before opening the Streamlit app. No source code is shared.</p><div class="mentor">Supervisors: Assoc. Prof. Minh-Phuong Tran and Dr. Huu-Can Nguyen · TDTU</div></div></article>
-<article class="project"><span class="project-number">05</span><div class="project-body"><div class="project-top"><h3>Existence Results for Semilinear Fractional Elliptic Equations</h3><span class="dates">Jun – Aug 2024</span></div><p>Nonnegative weak solutions, fractional Laplacians, Green operator estimates, and fixed-point arguments.</p><div aria-label="Project links" class="pub-links research-pub-links"><span aria-label="PDF · unavailable, not yet available" class="quiet-link quiet-disabled" title="File not yet available"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg>PDF · unavailable</span></div><div class="mentor">Supervisor: Assoc. Prof. Phuoc-Tai Nguyen · Masaryk University</div></div></article>
-<article class="project"><span class="project-number">06</span><div class="project-body"><div class="project-top"><h3>Regularity for Non-Uniformly Elliptic Double Obstacle Problems</h3><span class="dates">Jun 2023 – Oct 2024</span></div><p>Fractional maximal operators, good-λ inequalities, and global estimates in Lorentz and Orlicz–Sobolev spaces.</p><div aria-label="Project links" class="pub-links research-pub-links"><a class="quiet-link" href="https://files.ele-math.com/articles/dea-16-15.pdf" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg>PDF</a></div><div class="mentor">Supervisor: Assoc. Prof. Minh-Phuong Tran · Ton Duc Thang University</div></div></article>
-</section><section aria-labelledby="streamlit-access-title" class="page" data-page="streamlit-access" hidden="" id="streamlit-access">
-<a class="breadcrumb" href="#research">← Back to Research</a>
-<p class="eyebrow">NUMERICAL ANALYSIS · WEB APPLICATION</p>
-<h2 class="page-title" id="streamlit-access-title">Streamlit app access</h2>
-<p class="section-intro">This web application demonstrates multistep numerical methods and simulations. It is hosted on Streamlit Community Cloud and may go to sleep after a period of inactivity.</p>
-<div class="wake-intro">
-<div aria-hidden="true" class="wake-intro-icon">↗</div>
-<div><strong>Request a wake-up notification</strong><p>Fill in your contact details to notify the website owner. The email request does <strong>not</strong> wake the app automatically. The owner may contact you using the address you provide.</p></div>
+<section aria-labelledby="education-title" class="page" data-page="education" hidden="" id="education">
+<div class="section-kicker">ACADEMIC BACKGROUND</div>
+<h2 class="page-title" id="education-title">Education</h2>
+<p class="section-intro">My undergraduate education, bachelor's thesis, and selected research experience in applied mathematics.</p>
+<h3 class="subheading education-section-title">Undergraduate Education</h3>
+<div class="edu-degree">
+<div class="edu-date">AUG 2021<br/><span>— OCT 2025</span></div>
+<div class="edu-degree-body">
+<span class="edu-eyebrow">BACHELOR OF SCIENCE</span>
+<h3>B.Sc. in Applied Mathematics</h3>
+<p class="edu-institution">Faculty of Mathematics and Statistics · Ton Duc Thang University</p>
+<p class="edu-location">Ho Chi Minh City, Vietnam</p>
+<div class="edu-metrics">
+<div><strong>8.74<span>/10.00</span></strong><small>Cumulative GPA</small></div>
+<div><strong>10<span>/10</span></strong><small>Bachelor's Thesis Grade</small></div>
 </div>
-<form action="https://formsubmit.co/tandatkhuu2k3@gmail.com" class="request-form" id="wakeup-request" method="POST">
-<input name="_subject" type="hidden" value="Streamlit wake-up request | Multistep Numerical Simulations"/>
-<input name="_template" type="hidden" value="table"/>
-<input name="_url" type="hidden" value="https://tandatkhuu.github.io/#streamlit-access"/>
-<input name="_next" type="hidden" value="https://tandatkhuu.github.io/#streamlit-sent"/>
-<input name="Application" type="hidden" value="https://multistepsim.streamlit.app/"/>
-<div aria-hidden="true" class="bot-trap"><label>Do not fill this field<input autocomplete="off" name="_honey" tabindex="-1"/></label></div>
-<div class="request-field"><label for="wake-name">Full name <span aria-hidden="true">*</span></label><input autocomplete="name" id="wake-name" maxlength="100" minlength="2" name="name" placeholder="Your full name" required="" type="text"/></div>
-<div class="request-field"><label for="wake-affiliation">Institution / affiliation <span aria-hidden="true">*</span></label><input autocomplete="organization" id="wake-affiliation" maxlength="160" minlength="2" name="Institution / affiliation" placeholder="University, school, company, or independent researcher" required="" type="text"/></div>
-<div class="request-field"><label for="wake-email">Email address <span aria-hidden="true">*</span></label><input autocomplete="email" id="wake-email" maxlength="160" name="email" placeholder="name@example.com" required="" type="email"/></div>
-<div class="request-field"><label for="wake-message">Note <span class="optional">(optional)</span></label><textarea id="wake-message" maxlength="800" name="Message" placeholder="What would you like to try or study?" rows="3"></textarea></div>
-<label class="consent"><input name="Consent" required="" type="checkbox" value="I agree to submit these details for this wake-up request"/><span>I agree to share the information above with the website owner via the <a href="https://formsubmit.co/" rel="noopener noreferrer" target="_blank">FormSubmit</a> email service for this request.</span></label>
-<button class="button request-submit" type="submit">Send wake-up request ↗</button>
-<p class="form-privacy">Your name, affiliation and email will be sent through a third-party service to the website owner. The request does not create an account or automatically activate the app. FormSubmit may ask you to complete a verification step.</p>
-</form>
-<p class="streamlit-direct">If you prefer not to send a request, you can <a href="https://multistepsim.streamlit.app/" rel="noopener noreferrer" target="_blank">open the Streamlit app directly ↗</a>. Streamlit may allow visitors to wake a sleeping public app themselves.</p>
-</section><section aria-labelledby="streamlit-sent-title" class="page" data-page="streamlit-sent" hidden="" id="streamlit-sent">
-<a class="breadcrumb" href="#research">← Back to Research</a>
-<p class="eyebrow">STREAMLIT APP · WAKE-UP REQUEST</p>
-<h2 class="page-title" id="streamlit-sent-title">Request submitted</h2>
-<div class="wake-intro"><div aria-hidden="true" class="wake-intro-icon">✓</div><div><strong>Thank you for your request.</strong><p>If the email notification service has been activated by the website owner, your message will be forwarded to their Gmail address. The app is not automatically woken up by this request.</p></div></div>
-<p class="section-intro">You can also check the app directly. If Streamlit shows a sleeping screen, it may offer a button to wake the app.</p>
-<a class="button" href="https://multistepsim.streamlit.app/" rel="noopener noreferrer" target="_blank">Open Streamlit app ↗</a>
+<div class="edu-thesis">
+<div class="edu-thesis-kicker">BACHELOR'S THESIS · 2025</div>
+<h4>Regularity for Solutions to Non-Uniformly Elliptic Equations in Some Generalized Function Spaces</h4>
+<p>Studied global gradient estimates for non-uniformly elliptic equations with double-phase (<em>p, q</em>)-growth in generalized Lorentz, Orlicz, and Morrey spaces, using fractional maximal operators and good-λ inequalities.</p>
+<div class="edu-supervisor">Supervisor: Assoc. Prof. Minh-Phuong Tran</div>
+<div class="pub-links education-downloads">
+<a aria-label="View bachelor's thesis in Vietnamese (PDF)" class="quiet-link" href="assets/pdfs/bachelor_thesis_vie.pdf" rel="noopener noreferrer" target="_blank">PDF_VIE <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a>
+<span aria-label="English thesis PDF is not yet available" class="quiet-link quiet-disabled" title="English version will be added later">PDF_ENG · coming soon</span>
+</div>
+</div>
+</div>
+</div>
+<hr class="education-divider"/>
+<div class="section-kicker">SELECTED PROJECTS</div>
+<h3 class="subheading education-section-title">Other Research</h3>
+<p class="section-intro education-other-intro">Research projects undertaken during and after my undergraduate studies. For published articles and preprints, please see <a href="#publications">Papers</a>.</p>
+<div class="edu-research-list">
+<article class="project">
+<span class="project-number">01</span>
+<div class="project-body"><div class="project-top"><h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><span class="dates">Dec 2025 – Aug 2026</span></div>
+<p>Global C¹,γ regularity, Harnack inequalities, Liouville-type rigidity, and principal eigenvalues for singular and degenerate fully nonlinear elliptic equations with Hamiltonian terms.</p><div class="mentor">Supervisor: Assoc. Prof. Hoang-Hung Vo · International University, VNU–HCM</div></div>
+</article>
+<article class="project">
+<span class="project-number">02</span>
+<div class="project-body"><div class="project-top"><h3>Liouville-Type Results for Infinity Elliptic Equations Involving Gradient and Hardy–Hénon Nonlinearities</h3><span class="dates">Aug 2025 – Mar 2026</span></div>
+<p>Weighted comparison principles, local regularity, radial analysis, and Liouville-type results for infinity elliptic equations with gradient and Hardy–Hénon nonlinearities.</p><div class="mentor">Supervisor: Assoc. Prof. Hoang-Hung Vo · International University, VNU–HCM</div></div>
+</article>
+<article class="project">
+<span class="project-number">03</span>
+<div class="project-body"><div class="project-top"><h3>Multistep Methods and Numerical Simulations for Real-World Models</h3><span class="dates">Aug 2024 – Jul 2025</span></div>
+<p>Studied Adams–Bashforth and Adams–Moulton methods, including convergence, consistency, stability, and Python-based numerical simulations for applied models.</p><div class="mentor">Supervisors: Assoc. Prof. Minh-Phuong Tran and Dr. Huu-Can Nguyen · Ton Duc Thang University</div></div>
+</article>
+<article class="project">
+<span class="project-number">04</span>
+<div class="project-body"><div class="project-top"><h3>Existence Results for Semilinear Fractional Elliptic Equations</h3><span class="dates">Jun – Aug 2024</span></div>
+<p>Studied existence of nonnegative weak solutions for semilinear elliptic equations, including fractional Laplace problems, using Green operator estimates and fixed-point arguments.</p><div class="mentor">Supervisor: Assoc. Prof. Phuoc-Tai Nguyen · Masaryk University</div></div>
+</article>
+<article class="project">
+<span class="project-number">05</span>
+<div class="project-body"><div class="project-top"><h3>Regularity for Non-Uniformly Elliptic Double Obstacle Problems with Fractional Maximal Operators</h3><span class="dates">Jun 2023 – Oct 2024</span></div>
+<p>Global regularity estimates for non-uniformly elliptic double-obstacle problems using fractional maximal operators and good-λ inequalities in Lorentz and Orlicz–Sobolev spaces.</p><div class="mentor">Supervisor: Assoc. Prof. Minh-Phuong Tran · Ton Duc Thang University</div></div>
+</article>
+</div>
 </section>
-
-
-
 <section aria-labelledby="talks-title" class="page" data-page="talks" hidden="" id="talks">
 <h2 class="page-title" id="talks-title">Talks &amp; Conferences</h2>
 <p class="section-intro">Research presentations, conferences, summer schools, and selected academic events.</p>
 <h3 class="subheading">Selected talks &amp; presentations</h3>
-<div class="timeline">
-<div class="timeline-item"><div class="timeline-year">2024–2026</div><h3>Applied Analysis Research Group (AARG) Seminars</h3><p>Selected research presentations · Ton Duc Thang University</p></div>
+<div class="timeline"><div class="timeline-item"><div class="timeline-year">2024–2026</div><h3>Applied Analysis Research Group (AARG) Seminars</h3><p>Selected research presentations · Ton Duc Thang University</p></div>
 <div class="timeline-item"><div class="timeline-year">2025</div><h3>Liouville-Type Results for Infinity Elliptic Equations</h3><p>VIASM Research Experience for Undergraduates (REU)</p></div>
 <div class="timeline-item"><div class="timeline-year">2025</div><h3>Multistep Methods and Numerical Simulations</h3><p>27th Euréka Student Scientific Research Award · Semifinal Round</p></div>
+<div class="timeline-item"><div class="timeline-year">2025</div><h3>Bachelor’s Thesis: Regularity for Solutions to Non-Uniformly Elliptic Equations</h3><p>Faculty of Mathematics and Statistics, Ton Duc Thang University · July 2025</p></div>
 <div class="timeline-item"><div class="timeline-year">2024</div><h3>Existence Results for Semilinear Fractional Elliptic Equations</h3><p>VIASM Research Experience for Undergraduates (REU)</p></div>
-<div class="timeline-item"><div class="timeline-year">2024</div><h3>Regularity for Non-Uniformly Elliptic Double Obstacle Problems</h3><p>14th Scientific Conference · VNU–HCM</p></div>
-</div>
+<div class="timeline-item"><div class="timeline-year">2024</div><h3>Regularity for Non-Uniformly Elliptic Double Obstacle Problems</h3><p>14th Scientific Conference · VNU–HCM</p></div></div>
 <h3 class="subheading">Conferences &amp; academic schools</h3>
 <ul class="workshop-list">
 <li>VIASM Summer School on Mathematical Physics <span class="ws-year">2026</span></li>
@@ -374,31 +396,24 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 </section>
 <section aria-labelledby="resources-title" class="page" data-page="resources" hidden="" id="resources">
 <div class="section-kicker">LEARNING &amp; REFERENCE</div><h2 class="page-title" id="resources-title">Resources</h2>
-<p class="section-intro">A curated space for mathematics notes, useful books, language preparation, and academic tools. I will add my own materials and recommendations here over time.</p>
+<p class="section-intro">A curated space for mathematics study notes, useful books, and academic tools. I will add my own materials and recommendations here over time.</p>
 <div class="resources-grid">
-<a class="resource-card" href="#resources-notes"><span aria-hidden="true" class="resource-icon">∑</span><span class="resource-card-copy"><strong>Undergraduate Mathematics Notes</strong><small>Course summaries, study notes, exercises and mathematical foundations</small><span class="resource-status">Materials coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
-<a class="resource-card" href="#resources-books"><span aria-hidden="true" class="resource-icon">◫</span><span class="resource-card-copy"><strong>Recommended Books</strong><small>Reading lists for analysis, PDEs, mathematical physics and more</small><span class="resource-status">Reading list coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
-<a class="resource-card" href="#resources-english"><span aria-hidden="true" class="resource-icon">Aa</span><span class="resource-card-copy"><strong>English &amp; GRE Preparation</strong><small>Language-learning resources and GRE Mathematics preparation</small><span class="resource-status">Materials coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
+<a class="resource-card" href="#resources-notes"><span aria-hidden="true" class="resource-icon">∑</span><span class="resource-card-copy"><strong>Study Notes</strong><small>Course summaries, study notes, exercises and mathematical foundations</small><span class="resource-status">Materials coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
+<a class="resource-card" href="#resources-books"><span aria-hidden="true" class="resource-icon">◫</span><span class="resource-card-copy"><strong>Books</strong><small>Reading lists for analysis, PDEs, mathematical physics and more</small><span class="resource-status">Reading list coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
 <a class="resource-card" href="#resources-other"><span aria-hidden="true" class="resource-icon">↗</span><span class="resource-card-copy"><strong>Other Resources</strong><small>LaTeX, Python, academic utilities and helpful links</small><span class="resource-status">Resources coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
 </div>
 <p class="resource-footnote">Resources are being assembled. Only materials that I have permission to share will be hosted here.</p>
 </section>
 <section aria-labelledby="resources-notes-title" class="page resource-detail" data-page="resources-notes" hidden="" id="resources-notes">
-<a class="breadcrumb" href="#resources">← All resources</a><div class="section-kicker">RESOURCES / MATHEMATICS</div><h2 class="page-title" id="resources-notes-title">Undergraduate Mathematics Notes</h2><p class="section-intro">This space will contain my study summaries, course materials and problem collections from undergraduate mathematics.</p>
+<a class="breadcrumb" href="#resources">← All resources</a><div class="section-kicker">RESOURCES / MATHEMATICS</div><h2 class="page-title" id="resources-notes-title">Study Notes</h2><p class="section-intro">This space will contain my study summaries, course materials and problem collections from undergraduate mathematics.</p>
 <div class="topic-pills"><span>Real Analysis</span><span>Functional Analysis</span><span>Ordinary Differential Equations</span><span>Partial Differential Equations</span><span>Probability</span><span>Numerical Analysis</span></div>
 <div class="empty-state"><span aria-hidden="true">∑</span><h3>Notes coming soon</h3><p>I will add downloadable notes and references here as they are prepared.</p></div>
 <!-- UPDATE RESOURCES NOTES: replace the empty-state with your own materials and links -->
 </section>
 <section aria-labelledby="resources-books-title" class="page resource-detail" data-page="resources-books" hidden="" id="resources-books">
-<a class="breadcrumb" href="#resources">← All resources</a><div class="section-kicker">RESOURCES / READING</div><h2 class="page-title" id="resources-books-title">Recommended Books</h2><p class="section-intro">A future reading list of books and references that I find useful, particularly in mathematical analysis, partial differential equations and mathematical physics.</p>
+<a class="breadcrumb" href="#resources">← All resources</a><div class="section-kicker">RESOURCES / READING</div><h2 class="page-title" id="resources-books-title">Books</h2><p class="section-intro">A future reading list of books and references that I find useful, particularly in mathematical analysis, partial differential equations and mathematical physics.</p>
 <div class="empty-state"><span aria-hidden="true">◫</span><h3>Reading list coming soon</h3><p>I will share book recommendations, short personal comments, and links to publishers or other authorized sources.</p></div>
 <!-- UPDATE RESOURCES BOOKS: list titles, authors, short notes and legal reference links -->
-</section>
-<section aria-labelledby="resources-english-title" class="page resource-detail" data-page="resources-english" hidden="" id="resources-english">
-<a class="breadcrumb" href="#resources">← All resources</a><div class="section-kicker">RESOURCES / PREPARATION</div><h2 class="page-title" id="resources-english-title">English &amp; GRE Preparation</h2><p class="section-intro">A place to collect English-learning materials and GRE Mathematics study resources.</p>
-<div class="topic-pills"><span>English</span><span>Academic Writing</span><span>GRE Mathematics</span></div>
-<div class="empty-state"><span aria-hidden="true">Aa</span><h3>Preparation materials coming soon</h3><p>Study plans, notes and practice links will be added here.</p></div>
-<!-- UPDATE ENGLISH AND GRE: add only materials and practice files you can legally share -->
 </section>
 <section aria-labelledby="resources-other-title" class="page resource-detail" data-page="resources-other" hidden="" id="resources-other">
 <a class="breadcrumb" href="#resources">← All resources</a><div class="section-kicker">RESOURCES / TOOLS</div><h2 class="page-title" id="resources-other-title">Other Resources</h2><p class="section-intro">Academic tools, technical templates and other links worth keeping in one place.</p>
@@ -422,9 +437,9 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
   const validPages = new Set(pages.map(p => p.dataset.page));
   function showPage() {
     const slug = decodeURIComponent(location.hash.slice(1)) || 'home';
-    const active = validPages.has(slug) ? slug : 'home';
+    const active = slug === 'research' ? 'education' : (validPages.has(slug) ? slug : 'home');
     pages.forEach(p => { p.hidden = p.dataset.page !== active; });
-    const activeTab = active.startsWith('resources-') ? 'resources' : (active === 'streamlit-access' || active === 'streamlit-sent' ? 'research' : active);
+    const activeTab = active.startsWith('resources-') ? 'resources' : active;
     tabs.forEach(t => { if (t.dataset.tab === activeTab) t.setAttribute('aria-current','page'); else t.removeAttribute('aria-current'); });
     const current = pages.find(p => p.dataset.page === active);
     document.title = (active === 'home' ? 'Tan-Dat Khuu' : current.querySelector('.page-title').textContent + ' | Tan-Dat Khuu') + ' · Mathematics';

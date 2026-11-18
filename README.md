@@ -1,44 +1,34 @@
-# Tan-Dat Khuu | Academic Homepage v4.0
+# Tan-Dat Khuu | Academic Homepage — v6
 
-A GitHub Pages website. All materials are placed under the site root.
+A static personal academic website for GitHub Pages, based on the v5.1 Navy & Teal design.
 
-## Updating the existing GitHub Pages repository
+## Pages
 
-1. Extract the ZIP.
-2. Upload `index.html` and the `assets/` directory contents to your existing `TanDatKhuu.github.io` repository, replacing files of the same name.
-3. Check that `index.html` is at repository root and PDFs are located in `assets/pdfs/`.
-4. Commit changes. GitHub Pages deploys automatically.
+Home · Paper · Education · Talks & Conferences · Teaching · Resources · Contact
 
-## Research PDFs
+**Education** includes the B.Sc. programme (Aug 2021 – Oct 2025), thesis grade and GPA, one Vietnamese thesis PDF, an inactive placeholder for the English thesis PDF, and five additional research projects (without downloads or software links).
 
-- `assets/pdfs/bachelor_thesis_vie.pdf`: Bachelor's thesis (Vietnamese).
-- `assets/pdfs/multistep_methods_vie.pdf`: multistep methods report (Vietnamese).
-- `PDF_ENG` links are deliberately marked `soon` until English files are provided.
-- Journal/preprint PDFs are linked to public publisher/arXiv URLs.
-- The REU 2024 project has no PDF among the supplied files, so its link is shown as unavailable instead of leading to a missing file.
+**Talks & Conferences** now lists academic activities without presentation attachments.
 
-## Streamlit wake-up email form: ONE-TIME ACTIVATION REQUIRED
+## Publication on GitHub Pages
 
-The Web app link opens a page with required Full name, Institution/Affiliation, and Email fields, plus a consent checkbox.
-The HTML form posts to FormSubmit.co, which can forward the request to `tandatkhuu2k3@gmail.com` after activation. This site is static GitHub Pages and cannot send Gmail messages by itself.
+Upload the **contents** of this folder, not the enclosing folder, to the root of `TanDatKhuu/TanDatKhuu.github.io` and commit the changes. `index.html` must be at repository root.
 
-To enable messages:
-1. Publish this site on GitHub Pages, then visit `https://tandatkhuu.github.io/#streamlit-access`.
-2. Send a test request using your own details.
-3. Open `tandatkhuu2k3@gmail.com`. Find FormSubmit's activation email (check Spam).
-4. Click its activation/confirmation link. Only after that are subsequent requests forwarded to your email.
-5. Send another test, and verify that the name, affiliation and email arrive.
+**IMPORTANT CLEANUP**: Uploading this version will NOT delete old files already in your GitHub repository. If older releases were uploaded, delete these obsolete files from the GitHub repository so their direct URLs stop being served:
 
-FormSubmit is an external email-form provider; submissions are handled by FormSubmit. It may display a CAPTCHA. No automatic Streamlit wake-up is performed.
-If Streamlit is sleeping, visitors with access to the app can usually wake it by clicking the Streamlit wake-up prompt themselves.
+- `assets/pdfs/multistep_methods_vie.pdf`
+- `assets/presentations/liouville_aarg_2026.pdf`
+- `assets/presentations/fractional_elliptic_reu_2024.pdf`
+- `assets/presentations/bachelor_thesis_presentation_2025.pdf`
+- `assets/presentations/multistep_aarg_2025.pdf`
 
-## Desktop and Web links
+After deleting all presentation files, the `assets/presentations` folder will disappear automatically. Historical Git commits may still contain earlier copies. Removing information from the repository's history requires a separate history-rewrite operation, if appropriate.
 
-- Desktop: https://drive.google.com/drive/folders/1Cy1le_rF0tYdrienfDnexj5CWZY2vj_j?usp=sharing
-- Streamlit: https://multistepsim.streamlit.app/
+## Thesis PDFs
 
-No project source code or private GitHub repository is included in this ZIP.
+- Vietnamese: `assets/pdfs/bachelor_thesis_vie.pdf` (provided, active).
+- English: not provided yet, so `PDF_ENG · coming soon` is deliberately not clickable. When available, place the English PDF in `assets/pdfs/` and update its link in the Education page.
 
-## Privacy and public distribution
+You may want to review the thesis PDF before making it public because the original contains a student ID and the names of other researchers.
 
-The two Vietnamese PDFs are publicly downloadable from your GitHub Pages site. The original reports contain authors' names and student IDs on title pages; verify you and your coauthors are comfortable with public publication before deploying.
+© 2026 Tan-Dat Khuu.
