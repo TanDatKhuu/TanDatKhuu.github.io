@@ -261,6 +261,25 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 @media(max-width:1260px){.brand-logo{width:36px;height:36px}.brand{gap:10px}}
 @media(max-width:760px){.brand{display:inline-flex;gap:10px;max-width:calc(100% - 60px)}.brand-logo{width:36px;height:36px}.brand-name{font-size:23px}.brand-tag{font-size:7.3px;letter-spacing:.15em}.home-interests{margin-top:33px}.home-interests-grid{column-gap:20px}}
 @media(max-width:520px){.home-interests-grid{grid-template-columns:1fr;gap:0}.home-interests-grid .bullet-list{line-height:1.8}}
+
+/* v10: split date stacks, integrated teaching in activities, linked mentors */
+.date-stack{display:inline-flex;flex-direction:column;align-items:flex-end;line-height:1.15;gap:2px;min-width:82px}
+.date-stack .date-start,.date-stack .date-end{display:block}
+.date-stack .date-sep{display:block;font-size:12px;line-height:1;color:#9bb0b6}
+.edu-date.date-stack{padding-top:2px;align-items:flex-start;min-width:110px;font-size:12px;line-height:1.4;letter-spacing:.045em;font-weight:780;color:var(--teal)}
+.edu-date.date-stack .date-sep{font-size:13px;color:#88a1a6}
+.project .dates.date-stack{font-size:12px;color:#8ea0aa;white-space:normal;margin-top:2px}
+.project .dates.date-stack .date-start,.project .dates.date-stack .date-end{white-space:nowrap}
+.person-link{font-weight:inherit;color:inherit;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.person-link:hover{color:var(--teal)}
+.activities-teaching-list .project p{margin-bottom:7px}
+.activities-teaching-list .pub-links{margin-top:4px}
+.homepage-link-icon{display:inline-flex;align-items:center;gap:5px}
+@media(max-width:760px){
+  .project .dates.date-stack{align-items:flex-start;margin:0 0 8px}
+  .edu-date.date-stack{min-width:0}
+}
+
 </style>
 </head>
 <body>
@@ -276,10 +295,9 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <a data-tab="activities" href="#activities">Activities</a>
 <div aria-label="Activities categories" class="submenu">
 <a href="#activities-research">Research</a>
-<a href="#activities-talks">Talks</a>
+<a href="#activities-teaching">Teaching</a>
 <a href="#activities-conferences">Conferences</a>
 </div></div>
-<a data-tab="teaching" href="#teaching">Teaching</a>
 <div class="nav-group"><a data-tab="resources" href="#resources">Resources</a>
 <div aria-label="Resources categories" class="submenu"><a href="#resources-notes">Study Notes</a><a href="#resources-books">Books</a><a href="#resources-other">Other Resources</a></div></div>
 
@@ -334,7 +352,7 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <h3>Regularity for non-uniformly elliptic double obstacle problems with fractional maximal operators</h3><div class="authors">G. K. Tran and <strong>T.-D. Khuu</strong></div><div class="venue"><em>Differential Equations &amp; Applications</em> 16(3) (2024), 251–268.</div>
 <div class="pub-links"><a class="quiet-link" href="https://doi.org/10.7153/dea-2024-16-15" rel="noopener noreferrer" target="_blank">Journal / DOI<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div></article>
 <h3 class="subheading" style="margin-top:34px">Preprints</h3>
-<article class="publication"><div class="pub-number">03</div><div>
+<article class="publication"><div class="pub-number">01</div><div>
 <span class="category-tag">Preprint · 2026</span>
 <h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><div class="authors">T.-H. Huynh, <strong>T.-D. Khuu</strong>, and H.-H. Vo</div><div class="venue">arXiv:2608.09317 [math.AP] (2026). Under journal consideration.</div>
 <div class="pub-links"><a class="quiet-link" href="https://arxiv.org/abs/2608.09317" rel="noopener noreferrer" target="_blank">arXiv<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div></article>
@@ -345,7 +363,7 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <p class="section-intro">My undergraduate education, bachelor's thesis, and academic honours.</p>
 <h3 class="subheading education-section-title">Undergraduate Education</h3>
 <div class="edu-degree">
-<div class="edu-date">AUG 2021<br/><span>— OCT 2025</span></div>
+<div class="edu-date date-stack"><span class="date-start">AUG 2021</span><span class="date-sep">↓</span><span class="date-end">OCT 2025</span></div>
 <div class="edu-degree-body">
 <span class="edu-eyebrow">BACHELOR OF SCIENCE</span>
 <h3>B.Sc. in Applied Mathematics</h3>
@@ -359,7 +377,7 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <div class="edu-thesis-kicker">BACHELOR'S THESIS · 2025</div>
 <h4>Regularity for Solutions to Non-Uniformly Elliptic Equations in Some Generalized Function Spaces</h4>
 <p>Studied global gradient estimates for non-uniformly elliptic equations with double-phase (<em>p, q</em>)-growth in generalized Lorentz, Orlicz, and Morrey spaces, using fractional maximal operators and good-λ inequalities.</p>
-<div class="edu-supervisor">Supervisor: Assoc. Prof. Minh-Phuong Tran</div>
+<div class="edu-supervisor">Supervisor: <a class="person-link" href="https://sites.google.com/site/tranmp86/" rel="noopener noreferrer" target="_blank">Assoc. Prof. Minh-Phuong Tran</a></div>
 <div class="pub-links education-downloads">
 <a aria-label="View bachelor's thesis in Vietnamese (PDF)" class="quiet-link" href="assets/pdfs/bachelor_thesis_vie.pdf" rel="noopener noreferrer" target="_blank">PDF_VIE <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a>
 <span aria-label="English thesis PDF is not yet available" class="quiet-link quiet-disabled" title="English version will be added later">PDF_ENG · coming soon</span>
@@ -379,49 +397,67 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <section aria-labelledby="activities-title" class="page" data-page="activities" hidden="" id="activities">
 <div class="section-kicker">RESEARCH &amp; ACADEMIC ENGAGEMENT</div>
 <h2 class="page-title" id="activities-title">Activities</h2>
-<p class="section-intro">My research projects and selected academic events.</p>
+<p class="section-intro">My research projects, teaching activities, and selected academic events.</p>
 <section aria-labelledby="activities-research-title" class="activity-section" id="activities-research">
 <div class="section-kicker">PROJECTS</div><h3 class="subheading activities-heading" id="activities-research-title">Research</h3>
 <p class="section-intro">Projects undertaken during and after my undergraduate studies. For journal articles and preprints, see <a href="#publications">Papers</a>.</p>
 <div class="edu-research-list">
 <article class="project">
 <span class="project-number">01</span>
-<div class="project-body"><div class="project-top"><h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><span class="dates">Dec 2025 – Aug 2026</span></div>
+<div class="project-body"><div class="project-top"><h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><span class="dates date-stack"><span class="date-start">Dec 2025</span><span class="date-sep">↓</span><span class="date-end">Aug 2026</span></span></div>
 <p>Global C¹,γ regularity, Harnack inequalities, Liouville-type rigidity, and principal eigenvalues for singular and degenerate fully nonlinear elliptic equations with Hamiltonian terms.</p>
-<div class="mentor">Supervisor: Assoc. Prof. Hoang-Hung Vo · International University, VNU–HCM</div>
+<div class="mentor">Supervisor: <a class="person-link" href="https://viasm.edu.vn/nhan-su/chi-tiet/vo-hoang-hung" rel="noopener noreferrer" target="_blank">Assoc. Prof. Hoang-Hung Vo</a> · International University, VNU–HCM</div>
 </div>
 </article>
 <article class="project">
 <span class="project-number">02</span>
-<div class="project-body"><div class="project-top"><h3>Liouville-Type Results for Infinity Elliptic Equations Involving Gradient and Hardy–Hénon Nonlinearities</h3><span class="dates">Aug 2025 – Mar 2026</span></div>
+<div class="project-body"><div class="project-top"><h3>Liouville-Type Results for Infinity Elliptic Equations Involving Gradient and Hardy–Hénon Nonlinearities</h3><span class="dates date-stack"><span class="date-start">Aug 2025</span><span class="date-sep">↓</span><span class="date-end">Mar 2026</span></span></div>
 <p>Weighted comparison principles, local regularity, radial analysis, and Liouville-type results for infinity elliptic equations with gradient and Hardy–Hénon nonlinearities.</p>
-<div class="mentor">Supervisor: Assoc. Prof. Hoang-Hung Vo · International University, VNU–HCM</div>
+<div class="mentor">Supervisor: <a class="person-link" href="https://viasm.edu.vn/nhan-su/chi-tiet/vo-hoang-hung" rel="noopener noreferrer" target="_blank">Assoc. Prof. Hoang-Hung Vo</a> · International University, VNU–HCM</div>
 <div class="mentor"><strong>Presentation:</strong> Applied Analysis Research Group (AARG) Seminar · Ton Duc Thang University · 2026</div>
 <div class="pub-links"><a aria-label="Open presentation slide for Liouville-type results" class="quiet-link" href="assets/presentations/liouville_aarg_2026.pdf" rel="noopener noreferrer" target="_blank">Slide <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div>
 </article>
 <article class="project">
 <span class="project-number">03</span>
-<div class="project-body"><div class="project-top"><h3>Multistep Methods and Numerical Simulations for Real-World Models</h3><span class="dates">Aug 2024 – Jul 2025</span></div>
+<div class="project-body"><div class="project-top"><h3>Multistep Methods and Numerical Simulations for Real-World Models</h3><span class="dates date-stack"><span class="date-start">Aug 2024</span><span class="date-sep">↓</span><span class="date-end">Jul 2025</span></span></div>
 <p>Studied Adams–Bashforth and Adams–Moulton methods, including convergence, consistency, stability, and Python-based numerical simulations for applied models.</p>
-<div class="mentor">Supervisors: Assoc. Prof. Minh-Phuong Tran and Dr. Huu-Can Nguyen · Ton Duc Thang University</div>
+<div class="mentor">Supervisors: <a class="person-link" href="https://sites.google.com/site/tranmp86/" rel="noopener noreferrer" target="_blank">Assoc. Prof. Minh-Phuong Tran</a> and <a class="person-link" href="https://fms.tdtu.edu.vn/en/people/phd-nguyen-huu-can" rel="noopener noreferrer" target="_blank">Dr. Huu-Can Nguyen</a> · Ton Duc Thang University</div>
 <div class="mentor"><strong>Presentation:</strong> Applied Analysis Research Group (AARG) Seminar · Ton Duc Thang University · 2025</div>
 <div class="pub-links"><a aria-label="Open presentation slide for multistep methods" class="quiet-link" href="assets/presentations/multistep_aarg_2025.pdf" rel="noopener noreferrer" target="_blank">Slide <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div>
 </article>
 <article class="project">
 <span class="project-number">04</span>
-<div class="project-body"><div class="project-top"><h3>Existence Results for Semilinear Fractional Elliptic Equations</h3><span class="dates">Jun – Aug 2024</span></div>
+<div class="project-body"><div class="project-top"><h3>Existence Results for Semilinear Fractional Elliptic Equations</h3><span class="dates date-stack"><span class="date-start">Jun 2024</span><span class="date-sep">↓</span><span class="date-end">Aug 2024</span></span></div>
 <p>Studied existence of nonnegative weak solutions for semilinear elliptic equations, including fractional Laplace problems, using Green operator estimates and fixed-point arguments.</p>
-<div class="mentor">Supervisor: Assoc. Prof. Phuoc-Tai Nguyen · Masaryk University</div>
+<div class="mentor">Supervisor: <a class="person-link" href="https://www.muni.cz/en/people/241127-phuoc-tai-nguyen/cv" rel="noopener noreferrer" target="_blank">Assoc. Prof. Phuoc-Tai Nguyen</a> · Masaryk University</div>
 <div class="mentor"><strong>Presentation:</strong> VIASM Research Experience for Undergraduates (REU) · 2024</div>
 <div class="pub-links"><a aria-label="Open presentation slide for fractional elliptic equations" class="quiet-link" href="assets/presentations/fractional_elliptic_reu_2024.pdf" rel="noopener noreferrer" target="_blank">Slide <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div>
 </article>
 <article class="project">
 <span class="project-number">05</span>
-<div class="project-body"><div class="project-top"><h3>Regularity for Non-Uniformly Elliptic Double Obstacle Problems with Fractional Maximal Operators</h3><span class="dates">Jun 2023 – Oct 2024</span></div>
+<div class="project-body"><div class="project-top"><h3>Regularity for Non-Uniformly Elliptic Double Obstacle Problems with Fractional Maximal Operators</h3><span class="dates date-stack"><span class="date-start">Jun 2023</span><span class="date-sep">↓</span><span class="date-end">Oct 2024</span></span></div>
 <p>Global regularity estimates for non-uniformly elliptic double-obstacle problems using fractional maximal operators and good-λ inequalities in Lorentz and Orlicz–Sobolev spaces.</p>
-<div class="mentor">Supervisor: Assoc. Prof. Minh-Phuong Tran · Ton Duc Thang University</div>
+<div class="mentor">Supervisor: <a class="person-link" href="https://sites.google.com/site/tranmp86/" rel="noopener noreferrer" target="_blank">Assoc. Prof. Minh-Phuong Tran</a> · Ton Duc Thang University</div>
 <div class="mentor"><strong>Presentation:</strong> 14th Scientific Conference · University of Science, VNU–HCM · 15 Nov 2024</div>
 <div class="pub-links"><a aria-label="Open presentation slides for the double obstacle problems research at the 14th Scientific Conference" class="quiet-link" href="assets/presentations/double_obstacle_vnuhcm_2024.pdf" rel="noopener noreferrer" target="_blank">Slide <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div>
+</article>
+</div></section>
+<section aria-labelledby="activities-teaching-title" class="activity-section" id="activities-teaching">
+<div class="section-kicker">TEACHING</div><h3 class="subheading activities-heading" id="activities-teaching-title">Teaching</h3>
+<p class="section-intro">Part-time teaching activities and mathematics support work.</p>
+<div class="edu-research-list activities-teaching-list">
+<article class="project">
+<span class="project-number">01</span>
+<div class="project-body"><div class="project-top"><h3>Part-time Mathematics Teacher</h3><span class="dates date-stack"><span class="date-start">Dec 2025</span><span class="date-sep">↓</span><span class="date-end">Present</span></span></div>
+<p>Teaching mathematics, guiding students through problem-solving, and helping students build confidence in mathematical reasoning.</p>
+<div class="mentor">Institution: Stemhouse Education · Ho Chi Minh City, Vietnam</div>
+<div class="pub-links"><a class="quiet-link homepage-link-icon" href="https://stemhouse.edu.vn/" rel="noopener noreferrer" target="_blank">Homepage <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path></svg></a></div></div>
+</article>
+<article class="project">
+<span class="project-number">02</span>
+<div class="project-body"><div class="project-top"><h3>Private Mathematics Tutor</h3><span class="dates date-stack"><span class="date-start">Jun 2024</span><span class="date-sep">↓</span><span class="date-end">Sep 2024</span></span></div>
+<p>Provided individual mathematics tutoring and academic support for strengthening foundational mathematical skills.</p>
+<div class="mentor">Location: Ho Chi Minh City, Vietnam</div></div>
 </article>
 </div></section>
 <section aria-labelledby="activities-conferences-title" class="activity-section" id="activities-conferences">
@@ -436,12 +472,6 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <li>Workshop on Analysis of Nonlinear PDEs, TDTU <span class="ws-year">2023</span></li>
 <li>VIASM–IAMP Summer School in Mathematical Physics, Quy Nhon <span class="ws-year">2023</span></li>
 </ul></section></section>
-<section aria-labelledby="teaching-title" class="page" data-page="teaching" hidden="" id="teaching">
-<h2 class="page-title" id="teaching-title">Teaching</h2>
-<p class="section-intro">Teaching is an opportunity for me to make mathematics more accessible and to develop clearer ways of communicating mathematical ideas.</p>
-<div class="teaching-card"><div class="eyebrow">December 2025 – Present</div><h3>Part-time Mathematics Teacher</h3><div class="faint">Stemhouse Education · Ho Chi Minh City, Vietnam</div><p>Teaching mathematics, guiding students through problem-solving, and helping them develop confidence in mathematical reasoning.</p></div>
-<div class="teaching-card"><div class="eyebrow">June – September 2024</div><h3>Private Mathematics Tutor</h3><div class="faint">Ho Chi Minh City, Vietnam</div><p>Individual mathematics tutoring and support for building core mathematical skills.</p></div>
-</section>
 <section aria-labelledby="resources-title" class="page" data-page="resources" hidden="" id="resources">
 <div class="section-kicker">LEARNING &amp; REFERENCE</div><h2 class="page-title" id="resources-title">Resources</h2>
 <p class="section-intro">A curated space for mathematics study notes, useful books, and academic tools. I will add my own materials and recommendations here over time.</p>
@@ -481,8 +511,8 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
   const validPages = new Set(pages.map(p => p.dataset.page));
   function showPage() {
     const slug = decodeURIComponent(location.hash.slice(1)) || 'home';
-    const activitySubsections = new Set(['activities-research','activities-conferences']);
-    const alias = slug === 'research' ? 'activities-research' : (slug === 'conferences' ? 'activities-conferences' : (slug === 'talks' ? 'activities-research' : (slug === 'contact' ? 'home' : slug)));
+    const activitySubsections = new Set(['activities-research','activities-teaching','activities-conferences']);
+    const alias = slug === 'research' ? 'activities-research' : (slug === 'teaching' ? 'activities-teaching' : (slug === 'conferences' ? 'activities-conferences' : (slug === 'talks' ? 'activities-research' : (slug === 'contact' ? 'home' : slug))));
     const targetId = activitySubsections.has(alias) ? alias : null;
     const active = activitySubsections.has(alias) ? 'activities' : (validPages.has(alias) ? alias : 'home');
     pages.forEach(p => { p.hidden = p.dataset.page !== active; });
