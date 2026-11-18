@@ -1,34 +1,38 @@
-# Tan-Dat Khuu | Academic Homepage — v6
+# Tan-Dat Khuu | Academic Homepage — v7
 
-A static personal academic website for GitHub Pages, based on the v5.1 Navy & Teal design.
+A personal academic site for GitHub Pages, preserving the Navy & Teal visual design.
 
-## Pages
+## Navigation
 
-Home · Paper · Education · Talks & Conferences · Teaching · Resources · Contact
+**Home** — About me, Research Interests, Contact Information (email, arXiv, ResearchGate, CV download). No awards, education summary or recent papers on the homepage.
 
-**Education** includes the B.Sc. programme (Aug 2021 – Oct 2025), thesis grade and GPA, one Vietnamese thesis PDF, an inactive placeholder for the English thesis PDF, and five additional research projects (without downloads or software links).
+**Paper** — Journal articles and preprints with DOI/arXiv links.
 
-**Talks & Conferences** now lists academic activities without presentation attachments.
+**Education** — B.Sc. at Ton Duc Thang University (Aug 2021–Oct 2025), undergraduate thesis (10/10), PDF_VIE and placeholder PDF_ENG, **Awards & Honours** in a chronological numbered list (4 awards and 2 merit scholarships).
 
-## Publication on GitHub Pages
+**Activities** — Three sections: Research (five non-thesis projects), Talks (six presentations), Conferences (seven conferences, workshops, and summer schools attended without a listed presentation). Section links: `#activities-research`, `#activities-talks`, `#activities-conferences`.
 
-Upload the **contents** of this folder, not the enclosing folder, to the root of `TanDatKhuu/TanDatKhuu.github.io` and commit the changes. `index.html` must be at repository root.
+**Teaching** and **Resources** remain unchanged; Resources retains Study Notes, Books, and Other Resources.
 
-**IMPORTANT CLEANUP**: Uploading this version will NOT delete old files already in your GitHub repository. If older releases were uploaded, delete these obsolete files from the GitHub repository so their direct URLs stop being served:
+## Deploy
 
-- `assets/pdfs/multistep_methods_vie.pdf`
-- `assets/presentations/liouville_aarg_2026.pdf`
-- `assets/presentations/fractional_elliptic_reu_2024.pdf`
-- `assets/presentations/bachelor_thesis_presentation_2025.pdf`
-- `assets/presentations/multistep_aarg_2025.pdf`
+Upload the **contents** of the unzipped folder to the root of `TanDatKhuu/TanDatKhuu.github.io`, including `index.html` and the `assets` folder. GitHub Pages is already configured for `main` / `(root)`.
 
-After deleting all presentation files, the `assets/presentations` folder will disappear automatically. Historical Git commits may still contain earlier copies. Removing information from the repository's history requires a separate history-rewrite operation, if appropriate.
+If your repository already has all the v6 assets, uploading only `index.html` is enough to apply this update. Do not overwrite the thesis PDF with another file.
 
-## Thesis PDFs
+The v7 package includes only the thesis PDF, not removed older slides, multistep reports or application assets. Files from older releases may still be in your public repository and require separate deletion; Git history may still retain them.
 
-- Vietnamese: `assets/pdfs/bachelor_thesis_vie.pdf` (provided, active).
-- English: not provided yet, so `PDF_ENG · coming soon` is deliberately not clickable. When available, place the English PDF in `assets/pdfs/` and update its link in the Education page.
+English thesis: PDF_ENG is intentionally not clickable until you supply an English version.
 
-You may want to review the thesis PDF before making it public because the original contains a student ID and the names of other researchers.
 
-© 2026 Tan-Dat Khuu.
+## v8 update (18 November 2026)
+- Home: About Me and Research Interests only. The five interests are organized into two columns (3+2) on desktop.
+- Site logo: original KTD favicon is displayed before the name in the top-left header and refreshed in browser tabs.
+- All other pages, PDFs, and social links are preserved.
+
+
+## Version 9.1 (18 November 2026)
+
+- Added the 24-slide PDF from the 14th Scientific Conference (University of Science, VNU-HCM, 15 November 2024) to the Double Obstacle research project.
+- Removed all “Slide · soon” placeholders, including the Harnack project (no presentation link until available).
+- Other content and branding unchanged.
