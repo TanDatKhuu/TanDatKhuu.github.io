@@ -280,6 +280,31 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
   .edu-date.date-stack{min-width:0}
 }
 
+
+/* v10.1: center education date arrow (Activities use single-line date ranges) */
+.edu-date.date-stack{display:flex;flex-direction:column;align-items:center;width:max-content;min-width:0;gap:2px}
+.edu-date.date-stack .date-start,.edu-date.date-stack .date-end{display:block;width:100%;text-align:center;white-space:nowrap}
+.edu-date.date-stack .date-sep{display:block;align-self:center;text-align:center;line-height:1.15;width:100%}
+@media(max-width:760px){.edu-date.date-stack{align-items:center}.edu-date.date-stack .date-sep{width:100%;text-align:center}}
+
+
+/* v10.2 · streamlined sidebar and concise contact information */
+.profile-quote{font:italic 500 15px/1.65 Georgia,'Times New Roman',serif;color:var(--teal);margin:17px 5px 0;max-width:245px;letter-spacing:.005em}
+.profile-quote span{padding:0 1px;color:var(--teal)}
+.home-contact-information{margin-top:43px;padding-top:27px;border-top:1px solid var(--line)}
+.home-contact-information .section-heading{margin:0 0 22px;font-size:19px}
+.contact-details{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1.12fr) minmax(0,.95fr);column-gap:15px;row-gap:19px}
+.contact-detail{display:flex;align-items:flex-start;gap:10px;min-width:0;font-size:13px;line-height:1.5;color:#556975}
+.contact-symbol{flex:0 0 31px;height:31px;display:grid;place-items:center;background:#e9f5f2;border-radius:8px;color:var(--teal)}
+.contact-symbol svg{width:17px;height:17px;display:block}
+.contact-detail>div{min-width:0;padding-top:1px}
+.contact-detail-label{display:block;text-transform:uppercase;letter-spacing:.105em;font-size:10px;font-weight:760;color:#7f959c;margin:1px 0 4px}
+.contact-detail a{color:var(--accentdeep);font-weight:600;overflow-wrap:anywhere}
+.contact-detail a:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:950px) and (min-width:761px){.contact-details{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:19px}}
+@media(max-width:760px){.profile-quote{display:block;font-size:13.5px;margin-top:14px}.profile-divider{display:block;margin-top:20px}.home-contact-information{margin-top:34px;padding-top:23px}.contact-details{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}}
+@media(max-width:520px){.contact-details{grid-template-columns:1fr;gap:17px}}
+
 </style>
 </head>
 <body>
@@ -295,8 +320,8 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <a data-tab="activities" href="#activities">Activities</a>
 <div aria-label="Activities categories" class="submenu">
 <a href="#activities-research">Research</a>
-<a href="#activities-teaching">Teaching</a>
 <a href="#activities-conferences">Conferences</a>
+<a href="#activities-teaching">Teaching</a>
 </div></div>
 <div class="nav-group"><a data-tab="resources" href="#resources">Resources</a>
 <div aria-label="Resources categories" class="submenu"><a href="#resources-notes">Study Notes</a><a href="#resources-books">Books</a><a href="#resources-other">Other Resources</a></div></div>
@@ -312,12 +337,11 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <p class="profile-affiliation">Ton Duc Thang University<br/><span style="font-size:13px;color:#a4abbb">(Alumnus)</span></p>
 <p class="profile-place"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Ho Chi Minh City, Vietnam</p>
 <div aria-label="Profile links" class="social">
-<a aria-label="Email Tan-Dat Khuu" href="mailto:tandatkhuu2k3@gmail.com" title="Email"><svg aria-hidden="true" fill="none" height="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="23"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-10 6L2 7"></path></svg></a>
 <a aria-label="Research on arXiv" href="https://arxiv.org/search/?query=Tan-Dat+Khuu&amp;searchtype=author" rel="noopener noreferrer" target="_blank" title="arXiv">arXiv</a>
 <a aria-label="Tan-Dat Khuu on ResearchGate" class="rg-link" href="https://www.researchgate.net/profile/Dat-Khuu" rel="noopener noreferrer" target="_blank" title="ResearchGate"><svg aria-hidden="true" fill="currentColor" focusable="false" height="25" viewbox="0 0 29 27" width="26"><text font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" x="1.5" y="22.5">R</text><text font-family="Arial,Helvetica,sans-serif" font-size="12.3" font-weight="700" x="18" y="11">G</text></svg></a>
 </div>
 <div class="profile-divider"></div>
-<p class="profile-note">Nonlinear PDEs · Mathematical Analysis<br/>Mathematical Physics</p>
+<p class="profile-quote">Never give up <span aria-hidden="true">–</span> You can do it</p>
 </div>
 </aside>
 <main class="main" id="main-content">
@@ -340,6 +364,14 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 </ul>
 </div>
 </section>
+<section class="home-contact-information" aria-labelledby="home-contact-title">
+<h3 class="section-heading" id="home-contact-title">Contact Information</h3>
+<div class="contact-details">
+<div class="contact-detail"><span class="contact-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><div><span class="contact-detail-label">Email</span><a href="mailto:tandatkhuu2k3@gmail.com">tandatkhuu2k3@gmail.com</a></div></div>
+<div class="contact-detail"><span class="contact-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><span class="contact-detail-label">Address</span><span>Ho Chi Minh City, Vietnam</span></div></div>
+<div class="contact-detail"><span class="contact-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.7L7.1 10a16 16 0 0 0 6.9 6.9l1.6-1.9a2 2 0 0 1 1.7-.6l3 .5a2 2 0 0 1 1.7 2Z"/></svg></span><div><span class="contact-detail-label">Phone Number</span><a href="tel:+84816597505">+84 816 597 505</a></div></div>
+</div>
+</section>
 </section>
 <section aria-labelledby="publications-title" class="page" data-page="publications" hidden="" id="publications">
 <h2 class="page-title" id="publications-title">Paper</h2>
@@ -354,7 +386,7 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <h3 class="subheading" style="margin-top:34px">Preprints</h3>
 <article class="publication"><div class="pub-number">01</div><div>
 <span class="category-tag">Preprint · 2026</span>
-<h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><div class="authors">T.-H. Huynh, <strong>T.-D. Khuu</strong>, and H.-H. Vo</div><div class="venue">arXiv:2608.09317 [math.AP] (2026). Under journal consideration.</div>
+<h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><div class="authors">T.-H. Huynh, <strong>T.-D. Khuu</strong>, and H.-H. Vo</div><div class="venue">arXiv:2608.09317 [math.AP] (2026).</div>
 <div class="pub-links"><a class="quiet-link" href="https://arxiv.org/abs/2608.09317" rel="noopener noreferrer" target="_blank">arXiv<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div></article>
 </section>
 <section aria-labelledby="education-title" class="page" data-page="education" hidden="" id="education">
@@ -404,22 +436,22 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <div class="edu-research-list">
 <article class="project">
 <span class="project-number">01</span>
-<div class="project-body"><div class="project-top"><h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><span class="dates date-stack"><span class="date-start">Dec 2025</span><span class="date-sep">↓</span><span class="date-end">Aug 2026</span></span></div>
+<div class="project-body"><div class="project-top"><h3>Harnack Theory and Rigidity for Singular and Degenerate Fully Nonlinear Elliptic Equations with Hamiltonians</h3><span class="dates">Dec 2025 – Aug 2026</span></div>
 <p>Global C¹,γ regularity, Harnack inequalities, Liouville-type rigidity, and principal eigenvalues for singular and degenerate fully nonlinear elliptic equations with Hamiltonian terms.</p>
-<div class="mentor">Supervisor: <a class="person-link" href="https://viasm.edu.vn/nhan-su/chi-tiet/vo-hoang-hung" rel="noopener noreferrer" target="_blank">Assoc. Prof. Hoang-Hung Vo</a> · International University, VNU–HCM</div>
+<div class="mentor">Supervisor: <a class="person-link" href="https://math.hcmiu.edu.vn/pgs-ts-vo-hoang-hung/" rel="noopener noreferrer" target="_blank">Assoc. Prof. Hoang-Hung Vo</a> · International University, VNU–HCM</div>
 </div>
 </article>
 <article class="project">
 <span class="project-number">02</span>
-<div class="project-body"><div class="project-top"><h3>Liouville-Type Results for Infinity Elliptic Equations Involving Gradient and Hardy–Hénon Nonlinearities</h3><span class="dates date-stack"><span class="date-start">Aug 2025</span><span class="date-sep">↓</span><span class="date-end">Mar 2026</span></span></div>
+<div class="project-body"><div class="project-top"><h3>Liouville-Type Results for Infinity Elliptic Equations Involving Gradient and Hardy–Hénon Nonlinearities</h3><span class="dates">Aug 2025 – Mar 2026</span></div>
 <p>Weighted comparison principles, local regularity, radial analysis, and Liouville-type results for infinity elliptic equations with gradient and Hardy–Hénon nonlinearities.</p>
-<div class="mentor">Supervisor: <a class="person-link" href="https://viasm.edu.vn/nhan-su/chi-tiet/vo-hoang-hung" rel="noopener noreferrer" target="_blank">Assoc. Prof. Hoang-Hung Vo</a> · International University, VNU–HCM</div>
+<div class="mentor">Supervisor: <a class="person-link" href="https://math.hcmiu.edu.vn/pgs-ts-vo-hoang-hung/" rel="noopener noreferrer" target="_blank">Assoc. Prof. Hoang-Hung Vo</a> · International University, VNU–HCM</div>
 <div class="mentor"><strong>Presentation:</strong> Applied Analysis Research Group (AARG) Seminar · Ton Duc Thang University · 2026</div>
 <div class="pub-links"><a aria-label="Open presentation slide for Liouville-type results" class="quiet-link" href="assets/presentations/liouville_aarg_2026.pdf" rel="noopener noreferrer" target="_blank">Slide <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div>
 </article>
 <article class="project">
 <span class="project-number">03</span>
-<div class="project-body"><div class="project-top"><h3>Multistep Methods and Numerical Simulations for Real-World Models</h3><span class="dates date-stack"><span class="date-start">Aug 2024</span><span class="date-sep">↓</span><span class="date-end">Jul 2025</span></span></div>
+<div class="project-body"><div class="project-top"><h3>Multistep Methods and Numerical Simulations for Real-World Models</h3><span class="dates">Aug 2024 – Jul 2025</span></div>
 <p>Studied Adams–Bashforth and Adams–Moulton methods, including convergence, consistency, stability, and Python-based numerical simulations for applied models.</p>
 <div class="mentor">Supervisors: <a class="person-link" href="https://sites.google.com/site/tranmp86/" rel="noopener noreferrer" target="_blank">Assoc. Prof. Minh-Phuong Tran</a> and <a class="person-link" href="https://fms.tdtu.edu.vn/en/people/phd-nguyen-huu-can" rel="noopener noreferrer" target="_blank">Dr. Huu-Can Nguyen</a> · Ton Duc Thang University</div>
 <div class="mentor"><strong>Presentation:</strong> Applied Analysis Research Group (AARG) Seminar · Ton Duc Thang University · 2025</div>
@@ -427,7 +459,7 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 </article>
 <article class="project">
 <span class="project-number">04</span>
-<div class="project-body"><div class="project-top"><h3>Existence Results for Semilinear Fractional Elliptic Equations</h3><span class="dates date-stack"><span class="date-start">Jun 2024</span><span class="date-sep">↓</span><span class="date-end">Aug 2024</span></span></div>
+<div class="project-body"><div class="project-top"><h3>Existence Results for Semilinear Fractional Elliptic Equations</h3><span class="dates">Jun 2024 – Aug 2024</span></div>
 <p>Studied existence of nonnegative weak solutions for semilinear elliptic equations, including fractional Laplace problems, using Green operator estimates and fixed-point arguments.</p>
 <div class="mentor">Supervisor: <a class="person-link" href="https://www.muni.cz/en/people/241127-phuoc-tai-nguyen/cv" rel="noopener noreferrer" target="_blank">Assoc. Prof. Phuoc-Tai Nguyen</a> · Masaryk University</div>
 <div class="mentor"><strong>Presentation:</strong> VIASM Research Experience for Undergraduates (REU) · 2024</div>
@@ -435,29 +467,11 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 </article>
 <article class="project">
 <span class="project-number">05</span>
-<div class="project-body"><div class="project-top"><h3>Regularity for Non-Uniformly Elliptic Double Obstacle Problems with Fractional Maximal Operators</h3><span class="dates date-stack"><span class="date-start">Jun 2023</span><span class="date-sep">↓</span><span class="date-end">Oct 2024</span></span></div>
+<div class="project-body"><div class="project-top"><h3>Regularity for Non-Uniformly Elliptic Double Obstacle Problems with Fractional Maximal Operators</h3><span class="dates">Jun 2023 – Oct 2024</span></div>
 <p>Global regularity estimates for non-uniformly elliptic double-obstacle problems using fractional maximal operators and good-λ inequalities in Lorentz and Orlicz–Sobolev spaces.</p>
 <div class="mentor">Supervisor: <a class="person-link" href="https://sites.google.com/site/tranmp86/" rel="noopener noreferrer" target="_blank">Assoc. Prof. Minh-Phuong Tran</a> · Ton Duc Thang University</div>
 <div class="mentor"><strong>Presentation:</strong> 14th Scientific Conference · University of Science, VNU–HCM · 15 Nov 2024</div>
 <div class="pub-links"><a aria-label="Open presentation slides for the double obstacle problems research at the 14th Scientific Conference" class="quiet-link" href="assets/presentations/double_obstacle_vnuhcm_2024.pdf" rel="noopener noreferrer" target="_blank">Slide <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg></a></div></div>
-</article>
-</div></section>
-<section aria-labelledby="activities-teaching-title" class="activity-section" id="activities-teaching">
-<div class="section-kicker">TEACHING</div><h3 class="subheading activities-heading" id="activities-teaching-title">Teaching</h3>
-<p class="section-intro">Part-time teaching activities and mathematics support work.</p>
-<div class="edu-research-list activities-teaching-list">
-<article class="project">
-<span class="project-number">01</span>
-<div class="project-body"><div class="project-top"><h3>Part-time Mathematics Teacher</h3><span class="dates date-stack"><span class="date-start">Dec 2025</span><span class="date-sep">↓</span><span class="date-end">Present</span></span></div>
-<p>Teaching mathematics, guiding students through problem-solving, and helping students build confidence in mathematical reasoning.</p>
-<div class="mentor">Institution: Stemhouse Education · Ho Chi Minh City, Vietnam</div>
-<div class="pub-links"><a class="quiet-link homepage-link-icon" href="https://stemhouse.edu.vn/" rel="noopener noreferrer" target="_blank">Homepage <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path></svg></a></div></div>
-</article>
-<article class="project">
-<span class="project-number">02</span>
-<div class="project-body"><div class="project-top"><h3>Private Mathematics Tutor</h3><span class="dates date-stack"><span class="date-start">Jun 2024</span><span class="date-sep">↓</span><span class="date-end">Sep 2024</span></span></div>
-<p>Provided individual mathematics tutoring and academic support for strengthening foundational mathematical skills.</p>
-<div class="mentor">Location: Ho Chi Minh City, Vietnam</div></div>
 </article>
 </div></section>
 <section aria-labelledby="activities-conferences-title" class="activity-section" id="activities-conferences">
@@ -471,7 +485,25 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <li>International Conference on Applied Mathematics (ICAM), TDTU <span class="ws-year">2024</span></li>
 <li>Workshop on Analysis of Nonlinear PDEs, TDTU <span class="ws-year">2023</span></li>
 <li>VIASM–IAMP Summer School in Mathematical Physics, Quy Nhon <span class="ws-year">2023</span></li>
-</ul></section></section>
+</ul></section>
+<section aria-labelledby="activities-teaching-title" class="activity-section" id="activities-teaching">
+<div class="section-kicker">TEACHING</div><h3 class="subheading activities-heading" id="activities-teaching-title">Teaching</h3>
+<p class="section-intro">Part-time teaching activities and mathematics support work.</p>
+<div class="edu-research-list activities-teaching-list">
+<article class="project">
+<span class="project-number">01</span>
+<div class="project-body"><div class="project-top"><h3>Part-time Mathematics Teacher</h3><span class="dates">Dec 2025 – Present</span></div>
+<p>Teaching mathematics, guiding students through problem-solving, and helping students build confidence in mathematical reasoning.</p>
+<div class="mentor">Institution: Stemhouse Education · Ho Chi Minh City, Vietnam</div>
+<div class="pub-links"><a class="quiet-link homepage-link-icon" href="https://stemhouse.edu.vn/" rel="noopener noreferrer" target="_blank">Homepage <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="14"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10.5V20h13v-9.5"></path></svg></a></div></div>
+</article>
+<article class="project">
+<span class="project-number">02</span>
+<div class="project-body"><div class="project-top"><h3>Private Mathematics Tutor</h3><span class="dates">Jun 2024 – Sep 2024</span></div>
+<p>Provided individual mathematics tutoring and academic support for strengthening foundational mathematical skills.</p>
+<div class="mentor">Location: Ho Chi Minh City, Vietnam</div></div>
+</article>
+</div></section></section>
 <section aria-labelledby="resources-title" class="page" data-page="resources" hidden="" id="resources">
 <div class="section-kicker">LEARNING &amp; REFERENCE</div><h2 class="page-title" id="resources-title">Resources</h2>
 <p class="section-intro">A curated space for mathematics study notes, useful books, and academic tools. I will add my own materials and recommendations here over time.</p>
