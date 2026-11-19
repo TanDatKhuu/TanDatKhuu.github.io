@@ -10,3 +10,7 @@ Static personal academic website for GitHub Pages.
 
 ## Deploy
 If v10.1 is already deployed, replace only the root `index.html`. Otherwise upload all files inside this folder to the repository root.
+
+## Books bibliography (v10.9)
+
+The Resources > Books page is a bibliographic list. Uploaded source book PDFs are intentionally **not** included in this website or distributed in its ZIP.
