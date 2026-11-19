@@ -41,7 +41,6 @@ a{color:var(--accentdeep);text-decoration:none}a:hover{color:#344f83}button{font
 .timeline{border-left:1px solid #dfe4ec;margin:21px 0 34px 8px;padding-left:23px}.timeline-item{position:relative;padding:0 0 24px}.timeline-item:before{content:"";position:absolute;top:9px;left:-29px;width:9px;height:9px;border-radius:50%;background:#aab6ce;box-shadow:0 0 0 3px white}.timeline-year{font-weight:750;font-size:12px;color:#98a6bd;letter-spacing:.03em}.timeline h3{font-size:15px;font-weight:660;line-height:1.4;margin:3px 0}.timeline p{font-size:13.5px;color:#858d98;margin:0}.workshop-list{list-style:none;padding:0;margin:0;display:grid;gap:0}.workshop-list li{font-size:14.5px;padding:11px 0;border-bottom:1px solid var(--line);color:#5a6674}.workshop-list li:first-child{border-top:1px solid var(--line)}.workshop-list .ws-year{font-size:12px;color:#9ca6b8;float:right;margin-left:10px}.awards{display:grid;grid-template-columns:1fr 1fr;gap:11px 20px}.award{border:1px solid var(--line);border-radius:7px;padding:12px 14px}.award strong{display:block;font-size:14px;font-weight:630}.award span{font-size:12px;color:#8c96a5;display:block;margin-top:3px}
 .teaching-card{padding:23px 24px;border:1px solid var(--line);background:var(--soft);border-radius:9px;margin-top:18px}.teaching-card h3{font-weight:650;font-size:19px;margin:4px 0 7px}.teaching-card .faint{font-size:13px}.teaching-card p{font-size:14.5px;color:#6b7581;margin:13px 0 0}.contact-card{background:#f8f9fc;border:1px solid var(--line);padding:27px;border-radius:8px;margin-top:22px}.contact-email{font-size:20px;font-weight:560;color:#657ca6;overflow-wrap:anywhere}.contact-card p{margin:0 0 11px}.contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.button{display:inline-flex;justify-content:center;align-items:center;gap:9px;background:#7d8fb1;color:white;font-size:13px;font-weight:700;border-radius:6px;padding:11px 17px;line-height:1.2;transition:background .15s,transform .15s}.button:hover{background:#5e759f;color:white;transform:translateY(-1px)}.button-light{color:#647896;border:1px solid #dbe1e9;background:white}.button-light:hover{background:#f0f3f8;color:#4b648c}
 .footer{border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px;margin:30px 57px 0 48px;padding:15px 0 24px;font-size:12px;color:#a9afb7}.footer a{color:#919cb1}
-.vietnamese-book-title {font-family: "Times New Roman", Georgia, serif;font-style: italic;font-size: inherit;ont-weight: normal;letter-spacing: normal;word-spacing: normal;}
 @media (max-width:1090px){.header{padding:0 23px}.brand{font-size:18px}.nav{gap:20px}.nav a{font-size:13px}.page-grid{padding:42px 35px 58px 30px;gap:35px;grid-template-columns:minmax(200px,245px) minmax(0,1fr)}.avatar{width:195px;height:195px}.profile-name{font-size:24px}.info-row{gap:20px}.footer{margin-left:30px;margin-right:35px}}
 @media(max-width:760px){.header{position:relative;min-height:0;display:block;padding:15px 20px 0;text-align:center}.brand{font-size:19px;display:inline-block}.nav{justify-content:flex-start;gap:21px;margin-top:4px;overflow-x:auto;overscroll-behavior-x:contain}.nav a{font-size:13px;line-height:47px}.page-grid{display:block;padding:32px 22px 30px}.profile-wrap{position:static;max-width:100%;padding:0 0 24px;margin-bottom:31px;border-bottom:1px solid var(--line)}.avatar{height:156px;width:156px}.profile-name{font-size:24px;margin:16px 0 6px}.profile-place{margin-top:8px}.social{margin-top:17px}.profile-divider,.profile-note{display:none}.page-title{font-size:34px}.lead{font-size:15.5px;line-height:1.75}.info-row{grid-template-columns:1fr;gap:25px;margin-top:30px}.highlights{grid-template-columns:1fr}.project-top{display:block}.project .dates{display:block;margin:0 0 9px}.awards{grid-template-columns:1fr}.footer{margin:0 22px;padding:18px 0;font-size:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.page{animation:none}a,.social a,.button{transition:none}}
@@ -346,6 +345,20 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 .book-list em{font-family:Georgia,'Times New Roman',serif;font-size:15px;font-style:italic;color:#273f50}
 .book-list .book-feature{margin:5px 0 0 5px;vertical-align:baseline}
 @media(max-width:760px){.book-group-title{font-size:20px}.book-list li{font-size:13.5px}.book-list em{font-size:14.5px}.book-intro{font-size:14px}.book-feature{margin:6px 0 0!important}}
+
+/* Vietnamese title: use a Vietnamese-capable UI italic, not Georgia's glyph fallback. */
+.book-list em.book-title-vi {
+  font-family: "Segoe UI", Arial, "Noto Sans", "DejaVu Sans", sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
+  font-kerning: normal;
+  letter-spacing: 0;
+  word-spacing: normal;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+}
+@media(max-width:760px){.book-list em.book-title-vi{font-size:13.5px}}
 </style>
 </head>
 <body>
@@ -551,7 +564,7 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <p class="section-intro">A curated space for mathematics study notes, a personal bibliography of books and references, and useful academic tools.</p>
 <div class="resources-grid">
 <a class="resource-card" href="#resources-notes"><span aria-hidden="true" class="resource-icon">∑</span><span class="resource-card-copy"><strong>Study Notes</strong><small>Course summaries, study notes, exercises and mathematical foundations</small><span class="resource-status">Materials coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
-<a class="resource-card" href="#resources-books"><span aria-hidden="true" class="resource-icon">◫</span><span class="resource-card-copy"><strong>Books</strong><small>Bibliographic reading list, organized by mathematical subject</small><span class="resource-status">17 annotated references · 7 highlighted</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
+<a class="resource-card" href="#resources-books"><span aria-hidden="true" class="resource-icon">◫</span><span class="resource-card-copy"><strong>Books</strong><small>Bibliographic reading list, organized by mathematical subject</small><span class="resource-status">21 references · 7 highlighted</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
 <a class="resource-card" href="#resources-other"><span aria-hidden="true" class="resource-icon">↗</span><span class="resource-card-copy"><strong>Other Resources</strong><small>LaTeX, Python, academic utilities and helpful links</small><span class="resource-status">Resources coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
 </div>
 <p class="resource-footnote">The Books list contains citations only. Study notes and other resources will be added when they are ready to share.</p>
@@ -584,6 +597,9 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <section class="book-group" aria-labelledby="books-group-3"><h3 class="book-group-title" id="books-group-3">Partial Differential Equations &amp; Variational Methods</h3>
 <ul class="book-list">
 <li><cite>Evans, L. C. (1998). <em>Partial differential equations</em>. American Mathematical Society.</cite> <span class="book-feature book-feature--key" title="Frequently consulted reference">★ Key reference</span></li>
+<li><cite>Caffarelli, L. A., &amp; Cabré, X. (1995). <em>Fully nonlinear elliptic equations</em>. American Mathematical Society.</cite></li>
+<li><cite>Chipot, M. (2009). <em>Elliptic equations: An introductory course</em>. Birkhäuser.</cite></li>
+<li><cite>Lindqvist, P. (2016). <em>Notes on the infinity Laplace equation</em>. Springer.</cite></li>
 <li><cite>Strauss, W. A. (2008). <em>Partial differential equations: An introduction</em> (2nd ed.). John Wiley &amp; Sons.</cite></li>
 <li><cite>Cannarsa, P., &amp; Sinestrari, C. (2004). <em>Semiconcave functions, Hamilton–Jacobi equations, and optimal control</em>. Birkhäuser.</cite></li>
 <li><cite>Giusti, E. (2003). <em>Direct methods in the calculus of variations</em>. World Scientific.</cite></li>
@@ -591,7 +607,7 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <section class="book-group" aria-labelledby="books-group-4"><h3 class="book-group-title" id="books-group-4">Numerical Analysis &amp; Scientific Computing</h3>
 <ul class="book-list">
 <li><cite>Burden, R. L., &amp; Faires, J. D. (2011). <em>Numerical analysis</em> (9th ed.). Brooks/Cole, Cengage Learning.</cite> <span class="book-feature book-feature--key" title="Frequently consulted reference">★ Key reference</span></li>
-<li><cite>Trần, M. P., &amp; Nguyễn, T. N. (2022). <em class="vietnamese-book-title" lang="vi">Giải tích số và ứng dụng (phần cơ bản)</em>. Nhà xuất bản Đại học Sư phạm Thành phố Hồ Chí Minh.</cite> <span class="book-feature book-feature--key" title="Frequently consulted reference">★ Key reference</span></li>
+<li><cite>Trần, M. P., &amp; Nguyễn, T. N. (2022). <em class="book-title-vi" lang="vi">Giải tích số và ứng dụng (phần cơ bản)</em>. Nhà xuất bản Đại học Sư phạm Thành phố Hồ Chí Minh.</cite> <span class="book-feature book-feature--key" title="Frequently consulted reference">★ Key reference</span></li>
 </ul></section>
 <section class="book-group" aria-labelledby="books-group-5"><h3 class="book-group-title" id="books-group-5">Mathematical Physics &amp; Spectral Theory</h3>
 <p class="book-group-subtitle">References I am especially interested in exploring more deeply as I move toward mathematical physics.</p>
@@ -604,8 +620,9 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <li><cite>James, G., Witten, D., Hastie, T., &amp; Tibshirani, R. (2013). <em>An introduction to statistical learning: With applications in R</em>. Springer.</cite></li>
 </ul></section>
 <section class="book-group" aria-labelledby="books-group-7"><h3 class="book-group-title" id="books-group-7">Additional Academic References</h3>
-<p class="book-group-subtitle">These are not published textbooks: they are lecture notes and a master’s thesis that I have consulted.</p>
+<p class="book-group-subtitle">A foundational survey article, lecture notes, and a master’s thesis that I have consulted (rather than published textbooks).</p>
 <ul class="book-list">
+<li><cite>Crandall, M. G., Ishii, H., &amp; Lions, P.-L. (1992). User’s guide to viscosity solutions of second order partial differential equations. <em>Bulletin of the American Mathematical Society, 27</em>(1), 1–67. https://doi.org/10.1090/S0273-0979-1992-00266-5.</cite></li>
 <li><cite>Salamon, D. A. (2016). <em>Measure and integration</em> [Lecture notes]. ETH Zürich.</cite></li>
 <li><cite>Kristiansson, E. (2002). <em>Decreasing rearrangement and Lorentz L(p, q) spaces</em> [Master’s thesis, Luleå University of Technology].</cite></li>
 </ul></section>
