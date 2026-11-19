@@ -359,6 +359,32 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
   text-rendering: optimizeLegibility;
 }
 @media(max-width:760px){.book-list em.book-title-vi{font-size:13.5px}}
+
+/* v10.12 — Collaborative undergraduate Study Notes */
+.notes-intro{max-width:805px;font-size:15.2px;line-height:1.85;color:#536a76;margin:6px 0 18px}
+.notes-caveat{font-size:12.6px;line-height:1.72;color:#718993;border-left:2px solid #9ec7c4;padding:3px 0 3px 14px;margin:0 0 27px}
+.notes-caveat a{font-weight:730;color:var(--accentdeep)}
+.notes-list{border-top:1px solid var(--line);margin-top:12px}
+.notes-item{display:grid;grid-template-columns:37px minmax(0,1fr);gap:16px;padding:25px 0 27px;border-bottom:1px solid var(--line)}
+.notes-number{color:var(--teal);font-size:13px;font-weight:760;padding-top:5px;font-variant-numeric:tabular-nums}
+.notes-item h3{font-size:17.5px;line-height:1.4;font-weight:690;color:var(--navy);margin:0 0 9px}
+.notes-description{font-size:14px;line-height:1.7;color:#667d87;margin:0 0 11px}
+.notes-credits{font-size:12.5px;line-height:1.65;color:#8a9ba3;margin:0 0 13px}
+.notes-links{display:flex;flex-wrap:wrap;align-items:center;gap:11px 20px}
+.notes-link{display:inline-flex;align-items:center;gap:6px;color:var(--teal);font-size:13px;font-weight:740;text-decoration:none}
+.notes-link:hover{text-decoration:underline;text-underline-offset:3px}
+.notes-link svg{width:13px;height:13px;flex-shrink:0}
+.notes-link .pages{font-size:11.5px;color:#8b9fa8;font-weight:520}
+.notes-upcoming{font-size:12px;color:#96a6ae}
+.notes-bottom{color:#81969e;font-size:12.5px;line-height:1.7;margin:20px 0 0}
+@media(max-width:760px){
+ .notes-intro{font-size:14px;line-height:1.78}
+ .notes-item{gap:11px;grid-template-columns:29px minmax(0,1fr);padding:21px 0 24px}
+ .notes-item h3{font-size:16.3px}
+ .notes-description{font-size:13.4px}
+ .notes-credits{font-size:12px}
+ .notes-link{font-size:12.8px}
+}
 </style>
 </head>
 <body>
@@ -563,17 +589,56 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <div class="section-kicker">LEARNING &amp; REFERENCE</div><h2 class="page-title" id="resources-title">Resources</h2>
 <p class="section-intro">A curated space for mathematics study notes, a personal bibliography of books and references, and useful academic tools.</p>
 <div class="resources-grid">
-<a class="resource-card" href="#resources-notes"><span aria-hidden="true" class="resource-icon">∑</span><span class="resource-card-copy"><strong>Study Notes</strong><small>Course summaries, study notes, exercises and mathematical foundations</small><span class="resource-status">Materials coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
+<a class="resource-card" href="#resources-notes"><span aria-hidden="true" class="resource-icon">∑</span><span class="resource-card-copy"><strong>Study Notes</strong><small>Course summaries, study notes, exercises and mathematical foundations</small><span class="resource-status">3 courses · 4 PDFs</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
 <a class="resource-card" href="#resources-books"><span aria-hidden="true" class="resource-icon">◫</span><span class="resource-card-copy"><strong>Books</strong><small>Bibliographic reading list, organized by mathematical subject</small><span class="resource-status">21 references · 7 highlighted</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
 <a class="resource-card" href="#resources-other"><span aria-hidden="true" class="resource-icon">↗</span><span class="resource-card-copy"><strong>Other Resources</strong><small>LaTeX, Python, academic utilities and helpful links</small><span class="resource-status">Resources coming soon</span></span><span aria-hidden="true" class="resource-arrow">↗</span></a>
 </div>
-<p class="resource-footnote">The Books list contains citations only. Study notes and other resources will be added when they are ready to share.</p>
+<p class="resource-footnote">The Books list contains bibliographic references only. Study Notes includes collaborative student-prepared PDFs; more materials will be added over time.</p>
 </section>
 <section aria-labelledby="resources-notes-title" class="page resource-detail" data-page="resources-notes" hidden="" id="resources-notes">
-<a class="breadcrumb" href="#resources">← All resources</a><div class="section-kicker">RESOURCES / MATHEMATICS</div><h2 class="page-title" id="resources-notes-title">Study Notes</h2><p class="section-intro">This space will contain my study summaries, course materials and problem collections from undergraduate mathematics.</p>
-<div class="topic-pills"><span>Real Analysis</span><span>Functional Analysis</span><span>Ordinary Differential Equations</span><span>Partial Differential Equations</span><span>Probability</span><span>Numerical Analysis</span></div>
-<div class="empty-state"><span aria-hidden="true">∑</span><h3>Notes coming soon</h3><p>I will add downloadable notes and references here as they are prepared.</p></div>
-<!-- UPDATE RESOURCES NOTES: replace the empty-state with your own materials and links -->
+<a class="breadcrumb" href="#resources">← All resources</a>
+<div class="section-kicker">RESOURCES / UNDERGRADUATE MATERIALS</div>
+<h2 class="page-title" id="resources-notes-title">Study Notes</h2>
+<p class="notes-intro">These notes were compiled by my classmates and me throughout our undergraduate studies. They bring together ideas, explanations, and exercises that we found useful along the way. I am sharing them to pass on some of the knowledge and experiences we gained from learning mathematics together. They may contain mistakes or omissions, and I would be grateful if you could <a href="mailto:tandatkhuu2k3@gmail.com?subject=Feedback%20on%20Study%20Notes">email me</a> whenever you notice something that could be improved. I hope these materials can be helpful on your own learning journey. Wishing you peaceful and enjoyable studies.</p>
+<p class="notes-caveat">These are informal, student-compiled study materials, not official university course notes. The original contributors are credited below and in the PDF files.</p>
+<div class="notes-list">
+<article class="notes-item">
+ <span class="notes-number">01</span>
+ <div>
+  <h3>Functional Analysis</h3>
+  <p class="notes-description">Normed and Banach spaces, bounded linear operators, key functional analytic theorems, inner product spaces, and Hilbert spaces.</p>
+  <p class="notes-credits">Theory: Tan Dat Khuu, Huynh Nhut Truong, Anh Phuong Dang &amp; Tra My Nguyen. Exercises: Khuu Tan Dat, Huynh Nhut Truong &amp; Nguyen Thanh Danh.</p>
+  <div class="notes-links">
+   <a class="notes-link" href="assets/notes/functional_analysis_theory.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Theory PDF (46 pages)">Theory <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg><span class="pages">46 pp.</span></a>
+   <a class="notes-link" href="assets/notes/functional_analysis_exercises.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Exercises PDF (14 pages)">Exercises <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg><span class="pages">14 pp.</span></a>
+  </div>
+ </div>
+</article>
+<article class="notes-item">
+ <span class="notes-number">02</span>
+ <div>
+  <h3>Measure Theory and Integration</h3>
+  <p class="notes-description">Measure spaces and σ-algebras, measurable functions, Lebesgue integration, and convergence theorems, with examples and worked problems.</p>
+  <p class="notes-credits">Compiled by Huynh Nhut Truong &amp; Khuu Tan Dat.</p>
+  <div class="notes-links">
+   <a class="notes-link" href="assets/notes/measure_theory_and_integration.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Theory &amp;amp; Examples PDF (47 pages)">Theory &amp; Examples <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg><span class="pages">47 pp.</span></a>
+  </div>
+ </div>
+</article>
+<article class="notes-item">
+ <span class="notes-number">03</span>
+ <div>
+  <h3>Probability Theory</h3>
+  <p class="notes-description">A collection of exercises and worked solutions on probability distributions, random variables, distribution functions, expectation, and variance.</p>
+  <p class="notes-credits">Contributors listed in the notes: Dat, Truong, Vy &amp; Phuong Anh.</p>
+  <div class="notes-links">
+   <a class="notes-link" href="assets/notes/probability_theory_exercises.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Exercises PDF (59 pages)">Exercises <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24"><path d="M14 3h7v7M10 14 21 3"></path><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"></path></svg><span class="pages">59 pp.</span></a>
+   <span class="notes-upcoming">Theory notes to be added later</span>
+  </div>
+ </div>
+</article>
+</div>
+<p class="notes-bottom">More subjects and updated versions will be added here as they become available.</p>
 </section>
 <section aria-labelledby="resources-books-title" class="page resource-detail" data-page="resources-books" hidden="" id="resources-books">
 <a class="breadcrumb" href="#resources">← All resources</a>
@@ -620,10 +685,11 @@ a{color:var(--accentdeep)}a:hover{color:#114f55}a:focus-visible,button:focus-vis
 <li><cite>James, G., Witten, D., Hastie, T., &amp; Tibshirani, R. (2013). <em>An introduction to statistical learning: With applications in R</em>. Springer.</cite></li>
 </ul></section>
 <section class="book-group" aria-labelledby="books-group-7"><h3 class="book-group-title" id="books-group-7">Additional Academic References</h3>
-<p class="book-group-subtitle">A foundational survey article and lecture notes that I have consulted (rather than published textbooks).</p>
+<p class="book-group-subtitle">A foundational survey article, lecture notes, and a master’s thesis that I have consulted (rather than published textbooks).</p>
 <ul class="book-list">
 <li><cite>Crandall, M. G., Ishii, H., &amp; Lions, P.-L. (1992). User’s guide to viscosity solutions of second order partial differential equations. <em>Bulletin of the American Mathematical Society, 27</em>(1), 1–67. https://doi.org/10.1090/S0273-0979-1992-00266-5.</cite></li>
 <li><cite>Salamon, D. A. (2016). <em>Measure and integration</em> [Lecture notes]. ETH Zürich.</cite></li>
+<li><cite>Kristiansson, E. (2002). <em>Decreasing rearrangement and Lorentz L(p, q) spaces</em> [Master’s thesis, Luleå University of Technology].</cite></li>
 </ul></section>
 </section>
 <section aria-labelledby="resources-other-title" class="page resource-detail" data-page="resources-other" hidden="" id="resources-other">
